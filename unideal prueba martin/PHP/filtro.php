@@ -8,13 +8,13 @@ $provincia = isset($_GET['provincia']) ? $mysqli->real_escape_string($_GET['prov
 $localidad = isset($_GET['localidad']) ? $mysqli->real_escape_string($_GET['localidad']) : '';
 $tipo = isset($_GET['tipo']) ? $mysqli->real_escape_string($_GET['tipo']) : '';
 
-$sql = "SELECT u.Acronimo
+$sql = "SELECT u.Enlace_Web
         FROM Universidades u
-        JOIN Provincias p ON u.ID_Provincia = p.ID_Provincia
         JOIN Localidades l ON u.ID_Localidad = l.ID_Localidad
+        JOIN Provincias p ON l.ID_Provincia = p.ID_Provincia
         WHERE 1=1";
 
-if ($provincia !== '') $sql .= " AND u.ID_Provincia = '$provincia'";
+if ($provincia !== '') $sql .= " AND p.ID_Provincia = '$provincia'";
 if ($localidad !== '') $sql .= " AND u.ID_Localidad = '$localidad'";
 if ($tipo !== '') $sql .= " AND u.Tipo = '$tipo'";
 
@@ -22,22 +22,13 @@ $result = $mysqli->query($sql);
 
 if ($result && $result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $acronimo = $row['Acronimo'];
+    $enlace = $row['Enlace_Web'];
 
-    $paginas = [
-        "UnLaM"  => "../HTML/unlam.html",
-        "UNM"    => "../HTML/unm.html",
-        "UNO"    => "../HTML/uno.html",
-        "UNTREF" => "../HTML/untref.html",
-        "UTN"    => "../HTML/utn.html",
-        "UNAHUR" => "../HTML/unahur.html"
-    ];
-
-    if (isset($paginas[$acronimo])) {
-        header("Location: " . $paginas[$acronimo]);
+    if (!empty($enlace)) {
+        header("Location: " . $enlace);
         exit();
     } else {
-        exit("Universidad no mapeada a página.");
+        exit("La universidad no tiene un enlace configurado.");
     }
 } else {
     exit("No se encontraron universidades con esos filtros.");
