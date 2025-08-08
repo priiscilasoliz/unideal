@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZO - Orientación Vocacional</title>
+  <link rel="stylesheet" href="../CSS/unlamstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">
+    <img src="../imagenes/logo.png" alt="logo">
+  </a>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="universidades.html">Universidades</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="nave">
+    <!-- Ícono lupa -->
+    <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+
+    <!-- Contenedor de búsqueda oculto -->
+    <div id="buscador-container" class="buscador-wrapper oculto">
+      <div class="input-wrapper">
+        <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
+        <div id="sombra" class="input-shadow"></div>
+      </div>
+      <div id="sugerencias" class="autocomplete-box"></div>
+    </div>
+
+    <!-- Otros íconos -->
+    <a href="#"><img src="../imagenes/user.png" alt="Usuario"></a>
+    <a href="register.html" class="btn-registrar" style="text-decoration: none; color: white;">Registrarse</a>
+  </div>
+</header>
+  <main>
+    <div class="container">
+        <h1>Universidad Nacional de Moreno (UNM)</h1>
+        <p>
+            Fundada en 1989, se encuentra en San Justo y es una de las principales universidades del oeste bonaerense. Cuenta con un campus de 40 hectáreas.
+        </p>
+        <img src="../imagenes/morenopt2.png" alt="Campus de la Universidad de Hurlingham">
+        
+        <div class="carreras">
+            <h2>Carreras:</h2>
+            <p>La UNM se orienta hacia el desarrollo social y económico de la región, priorizando carreras en áreas estratégicas como biotecnología, comunicación y tecnología:</p>
+            <h3>Ciencias y Tecnología:</h3>
+            <ul>
+                <li>Ingeniería Industrial​</li>
+                <li>Licenciatura en Biotecnología</li>
+            </ul>
+
+            <h3>Comunicación y Ciencias Sociales:</h3>
+            <ul>
+                <li>Licenciatura en Comunicación Social​</li>
+                <li>Licenciatura en Trabajo Social</li>
+            </ul>
+            
+            <h3>Economía y Gestión:</h3>
+            <ul>
+                <li>Contador Público​</li>
+                <li>Licenciatura en Administración​</li>
+            </ul>
+
+
+        <h2>Modalidades Disponibles y Datos de Contacto</h2>
+        <h3>Modalidades de Estudio:</h3>
+        <ul>
+            <li>Presencial, con algunas opciones híbridas en cursos específicos</li>
+        </ul>
+        <h3>Contacto:</h3>
+        <ul>
+            <li>Página web: www.unm.edu.ar</li>
+            <li>Dirección: Av. Bartolomé Mitre 1891, Moreno, Buenos Aires</li>
+            <li>Teléfono: (011) 0237-466-7186</li>
+        </ul>
+    </div>
+    <div class="navegacion">
+        <a href="../index.html" class="boton-siguiente">
+            <img src="../imagenes/ArrowBack.png" alt="Flecha derecha" class="icono">
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; Todos los derechos reservados por UZO.</p>
+    </footer>
+<script src="../JS/toggle-buscador.js"></script>
+<script src="../JS/buscador.js"></script>
+</body>
+</html>

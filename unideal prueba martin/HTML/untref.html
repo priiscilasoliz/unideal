@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZO - Orientación Vocacional</title>
+  <link rel="stylesheet" href="../CSS/unlamstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">
+    <img src="../imagenes/logo.png" alt="logo">
+  </a>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="universidades.html">Universidades</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="nave">
+    <!-- Ícono lupa -->
+    <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+
+    <!-- Contenedor de búsqueda oculto -->
+    <div id="buscador-container" class="buscador-wrapper oculto">
+      <div class="input-wrapper">
+        <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
+        <div id="sombra" class="input-shadow"></div>
+      </div>
+      <div id="sugerencias" class="autocomplete-box"></div>
+    </div>
+
+    <!-- Otros íconos -->
+    <a href="#"><img src="../imagenes/user.png" alt="Usuario"></a>
+    <a href="register.html" class="btn-registrar" style="text-decoration: none; color: white;">Registrarse</a>
+  </div>
+</header>
+  <main>
+    <div class="container">
+        <h1>Universidad Nacional de Tres de Febrero (UNTREF)</h1>
+        <p>
+            Fundada en 1995, se destaca por su innovación educativa y su oferta multidisciplinaria.
+        </p>
+        <img src="../imagenes/untrefpt2.png" alt="Campus de la Universidad de Hurlingham">
+        
+        <div class="carreras">
+            <h2>Carreras:</h2>
+            <p>La UNTREF combina educación de calidad con innovación, ofreciendo programas que cubren desde el arte y la tecnología hasta las ciencias exactas.</p>
+            <h3>Arte y Tecnología:</h3>
+            <ul>
+                <li>Licenciatura en Artes Electrónicas</li>
+                <li>Ingeniería de Sonido</li>
+            </ul>
+
+            <h3>Ciencias Sociales y Gestión:</h3>
+            <ul>
+                <li>Licenciatura en Relaciones Internacionales</li>
+                <li>Licenciatura en Gestión Ambiental</li>
+            </ul>
+            
+            <h3>Datos y Tecnología:</h3>
+            <ul>
+                <li>Licenciatura en Ciencia de Datos</li>
+                <li>Licenciatura en Matemática Aplicada​</li>
+            </ul>
+
+
+        <h2>Modalidades Disponibles y Datos de Contacto</h2>
+        <h3>Modalidades de Estudio:</h3>
+        <ul>
+            <li>Presencial, virtual e híbrido, según el programa.</li>
+        </ul>
+        <h3>Contacto:</h3>
+        <ul>
+            <li>Página web: www.untref.edu.ar</li>
+            <li>Dirección: Valentín Gómez 4752, Caseros, Buenos Aires</li>
+            <li>Teléfono: (011) 4759-0040</li>
+        </ul>
+    </div>
+    <div class="navegacion">
+        <a href="../index.html" class="boton-siguiente">
+            <img src="../imagenes/ArrowBack.png" alt="Flecha derecha" class="icono">
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; Todos los derechos reservados por UZO.</p>
+    </footer>
+<script src="../JS/toggle-buscador.js"></script>
+<script src="../JS/buscador.js"></script>
+</body>
+</html>

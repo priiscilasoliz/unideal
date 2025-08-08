@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZO - Orientación Vocacional</title>
+  <link rel="stylesheet" href="../CSS/unlamstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">
+    <img src="../imagenes/logo.png" alt="logo">
+  </a>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="universidades.html">Universidades</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="nave">
+    <!-- Ícono lupa -->
+    <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+
+    <!-- Contenedor de búsqueda oculto -->
+    <div id="buscador-container" class="buscador-wrapper oculto">
+      <div class="input-wrapper">
+        <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
+        <div id="sombra" class="input-shadow"></div>
+      </div>
+      <div id="sugerencias" class="autocomplete-box"></div>
+    </div>
+
+    <!-- Otros íconos -->
+    <a href="#"><img src="../imagenes/user.png" alt="Usuario"></a>
+    <a href="register.html" class="btn-registrar" style="text-decoration: none; color: white;">Registrarse</a>
+  </div>
+</header>
+  <main>
+    <div class="container">
+        <h1>Universidad Nacional del Oeste (UNO)</h1>
+        <p>
+            Creada en 2009, está en Merlo y responde a las demandas educativas locales.
+        </p>
+        <img src="../imagenes/unopt2.png" alt="Campus de la Universidad de Hurlingham">
+        
+        <div class="carreras">
+            <h2>Carreras:</h2>
+            <p>La UNO ofrece carreras que están orientadas a cubrir necesidades en áreas como la logística, la salud y la informática, todas con un fuerte enfoque práctico:</p>
+            <h3>Ciencias Económicas y Gestión:</h3>
+            <ul>
+                <li>Licenciatura en Logística</li>
+                <li>Licenciatura en Administración y Economía</li>
+            </ul>
+
+            <h3>Salud y Seguridad:</h3>
+            <ul>
+                <li>Licenciatura en Gestión de Servicios de Salud</li>
+                <li>Licenciatura en Seguridad e Higiene en el Trabajo</li>
+            </ul>
+            
+            <h3>Tecnología y Ciencias de la Información:</h3>
+            <ul>
+                <li>Licenciatura en Informática</li>
+                <li>Tecnicatura en Redes y Telecomunicaciones</li>
+            </ul>
+
+        <h2>Modalidades Disponibles y Datos de Contacto:</h2>
+        <h3>Modalidades de Estudio:</h3>
+        <ul>
+            <li>Principalmente presencial, con opciones virtuales en áreas específicas.</li>
+        </ul>
+        <h3>Contacto:</h3>
+        <ul>
+            <li>Página web: www.uno.edu.ar</li>
+            <li>Dirección: Belgrano 369, Merlo, Buenos Aires</li>
+            <li>Teléfono: (011) 0220-483-2671</li>
+        </ul>
+    </div>
+    <div class="navegacion">
+        <a href="../index.html" class="boton-siguiente">
+            <img src="../imagenes/ArrowBack.png" alt="Flecha derecha" class="icono">
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; Todos los derechos reservados por UZO.</p>
+    </footer>
+<script src="../JS/toggle-buscador.js"></script>
+<script src="../JS/buscador.js"></script>
+</body>
+</html>

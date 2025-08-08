@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZO - Orientación Vocacional</title>
+  <link rel="stylesheet" href="../CSS/unlamstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">
+    <img src="../imagenes/logo.png" alt="logo">
+  </a>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="universidades.html">Universidades</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="nave">
+    <!-- Ícono lupa -->
+    <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+
+    <!-- Contenedor de búsqueda oculto -->
+    <div id="buscador-container" class="buscador-wrapper oculto">
+      <div class="input-wrapper">
+        <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
+        <div id="sombra" class="input-shadow"></div>
+      </div>
+      <div id="sugerencias" class="autocomplete-box"></div>
+    </div>
+
+    <!-- Otros íconos -->
+    <a href="#"><img src="../imagenes/user.png" alt="Usuario"></a>
+    <a href="register.html" class="btn-registrar" style="text-decoration: none; color: white;">Registrarse</a>
+  </div>
+</header>
+  <main>
+    <div class="container">
+        <h1>Universidad Nacional de Hurlingham (UNAHUR)</h1>
+        <p>
+            Inaugurada en 2015, busca democratizar el acceso a la educación superior en Hurlingham y alrededores. Su lema es ofrecer calidad educativa cercana a la comunidad.
+        </p>
+        <img src="../imagenes/hurlimpt2.png" alt="Campus de la Universidad de Hurlingham">
+        
+        <div class="carreras">
+            <h2>Carreras:</h2>
+            <p>La UNAHUR tiene enfoque está en brindar carreras accesibles y relevantes para el desarrollo de la comunidad local, con énfasis en ciencias aplicadas y educación:</p>
+            <h3>Ciencias de la Salud:</h3>
+            <ul>
+                <li>Licenciatura en Kinesiología y Fisiatría</li>
+                <li>Licenciatura en Enfermería</li>
+                <li>Tecnicatura Universitaria en Instrumentación Quirúrgica</li>
+            </ul>
+
+            <h3>Ingeniería y Tecnología:</h3>
+            <ul>
+                <li>Ingeniería Eléctrica</li>
+                <li>Tecnicatura Universitaria en Energía Eléctrica</li>
+                <li>Tecnicatura Universitaria en Informática</li>
+            </ul>
+            
+            <h3>Educación:</h3>
+            <ul>
+                <li>Profesorado Universitario de Educación Primaria</li>
+                <li>Profesorado Universitario de Educación Inicial</li>
+            </ul>
+
+            <h3>Ciencia y Tecnología de Alimentos:</h3>
+            <ul>
+                <li>Tecnicatura Universitaria en Laboratorio​</li>
+            </ul>
+
+
+        <h2>Modalidades Disponibles y Datos de Contacto</h2>
+        <h3>Modalidades de Estudio:</h3>
+        <ul>
+            <li>Presencial, con opciones virtuales en posgrados y educación continua.</li>
+        </ul>
+        <h3>Contacto:</h3>
+        <ul>
+            <li>
+                Página web: www.unahur.edu.ar</li>
+            <li>Dirección: Av. Vergara 2222, Villa Tesei, Buenos Aires</li>
+            <li>Teléfono: (011) 4450-0900</li>
+        </ul>
+    </div>
+    <div class="navegacion">
+        <a href="../index.html" class="boton-siguiente">
+            <img src="../imagenes/ArrowBack.png" alt="Flecha derecha" class="icono">
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; Todos los derechos reservados por UZO.</p>
+    </footer>
+<script src="../JS/toggle-buscador.js"></script>
+<script src="../JS/buscador.js"></script>
+</body>
+</html>
