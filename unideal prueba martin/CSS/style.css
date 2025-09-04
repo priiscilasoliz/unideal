@@ -400,14 +400,13 @@ select::after {
 /* Contenedor principal de las estadísticas */
 .estadisticas {
   display: flex;
-  justify-content: space-between; /* Espaciado entre las estadísticas */
-  align-items: center; /* Centrado vertical */
-  margin-top: 10px; /* Espacio entre el texto y las estadísticas */
-  gap: 20px; /* Espaciado entre los bloques */
-  max-width: 600px; /* Limita el ancho al del texto */
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
-/* Estilo para cada bloque de estadística */
 .estadistica {
   flex: 1; /* Todas las estadísticas ocupan el mismo ancho */
   text-align: left; /* Centra el contenido dentro del bloque */
@@ -422,6 +421,19 @@ select::after {
 .estadistica p {
   font-size: 18px; /* Tamaño del texto descriptivo */
   color: #1B3A57; /* Azul oscuro */
+}
+
+@media (max-width: 900px) {
+  .estadisticas {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .estadisticas > div {
+    min-width: 120px;
+    max-width: 160px;
+    flex: 1 1 120px;
+  }
 }
 
 .ofrecemos {
@@ -529,8 +541,12 @@ select::after {
 }
 
 .universidad img {
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .universidad h3 {
@@ -559,5 +575,357 @@ select::after {
 
 .boton:hover {
   background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Asegura que el padding y border no desborden el ancho */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --- Responsive para móviles y tablets --- */
+@media (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+  h1, h2, h3 {
+    font-size: 1.1em;
+    margin: 8px 0;
+  }
+  .universidad {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    padding: 8px;
+    margin: 0 auto 10px auto;
+  }
+  .universidades-container {
+    width: 100%;
+    padding: 0 5px;
+    gap: 10px;
+  }
+  nav a, .boton, .btn, .btn-registrar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 0;
+    font-size: 1em;
+  }
+  section, .ofrecemos, .descubre {
+    padding: 8px 0;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .logo {
+    margin-bottom: 6px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+  .nave {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+  }
+  .logo img {
+    max-width: 100px;
+    height: auto;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  nav a {
+    font-size: 1em;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+  .nave {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .icono-busqueda {
+    height: 18px;
+    width: auto;
+  }
+  .descubre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    gap: 18px;
+  }
+  .descubre .texto {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    padding: 0 8px;
+  }
+  .descubre .imagen2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .descubre .imagen2 img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Todos los divs principales */
+  .universidades-container,
+  .universidad,
+  .descubre,
+  .ofrecemos,
+  .recuadros,
+  .recuadros-centrados,
+  .estadisticas,
+  .filtros,
+  .footer {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  /* Ajuste para divs internos */
+  .universidad,
+  .recuadro,
+  .filtro {
+    width: 95%;
+    min-width: unset;
+    max-width: 350px;
+    margin: 0 auto 8px auto;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  /* Imágenes dentro de divs */
+  .universidad img,
+  .descubre .imagen2 img,
+  .recuadro img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .recuadros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 12px;
+    width: 100%;
+    padding: 8px 0;
+    justify-items: center;
+  }
+  @media (max-width: 600px) {
+    .recuadros {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+  }
+  .recuadro {
+    width: 90%;
+    max-width: 180px;
+    min-width: 120px;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  .recuadro img {
+    width: 80px;
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recuadro p,
+  .recuadro h3,
+  .recuadro h4 {
+    font-size: 1em;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .bienvenida, .texto-bienvenida {
+    font-size: 1em;
+    text-align: center;
+    margin: 12px 8px;
+    padding: 0 6px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+}
+@media (max-width: 900px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 0;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    width: auto;
+  }
+  .header-derecha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn-registrar {
+    align-self: flex-end;
+    margin-bottom: 6px;
+    width: auto;
+  }
+  .nave {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/* --- Desktop: íconos al lado del botón --- */
+.header-derecha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.nave {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.btn-registrar {
+  order: 2; /* Registrarse a la derecha */
+}
+.nave {
+  order: 1; /* Íconos a la izquierda */
+}
+
+/* Responsive: apila el botón arriba y los íconos abajo */
+@media (max-width: 900px) {
+  .header-derecha {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  .btn-registrar {
+    order: 1;
+    margin-bottom: 6px;
+  }
+  .nave {
+    order: 2;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.nave {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px; /* Más separación entre los íconos */
+}
+@media (max-width: 900px) {
+  .nave {
+    gap: 14px; /* Un poco menos en responsive si prefieres */
+  }
+}
+
+@media (max-width: 900px) {
+  .estudiante .texto h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-align: center;
+    word-break: break-word;
+  }
+  .estudiante .texto p {
+    font-size: 1em;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  .estudiante .texto {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 0 8px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 900px) {
+  .filtros {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 12px; /* Espaciado lateral para separar de los bordes */
+    max-width: 500px;   /* Limita el ancho máximo en móviles */
+    margin: 24px auto;  /* Centra y da espacio arriba/abajo */
+    box-sizing: border-box;
+  }
+  .filtro {
+    width: 100%;
+    padding: 10px 8px; /* Espaciado interno en cada filtro */
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 900px) {
+  .descubre .texto {
+    font-size: 1em;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 0 8px;
+    text-align: center;
+    word-break: break-word;
+  }
 }
 
