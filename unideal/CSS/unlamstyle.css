@@ -207,14 +207,14 @@ h1, h2 {
     text-align: center;
 }
 
-.unlamfoto{
+.fotodeuniversidad { 
     display: block;
-    margin: 20px auto;
-    max-width: 100%;
+    margin: 40px auto;
+    max-width: 90%;
+    height: auto; /* mantiene proporciones */
     border-radius: 8px;
-    margin-top: 40px;
-    margin-bottom: 60px;
 }
+
 .carreras {
     margin-top: 20px;
 }
