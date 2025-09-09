@@ -1,68 +1,66 @@
 <?php
-// Datos de conexión (los podés pasar como variables de entorno)
-$host = "br-patient-sun-acvqmba9.neon.tech"; // reemplazar con tu host de Neon
-$port = "5432";
+// Datos de conexión (XAMPP local)
+$host = "localhost";
+$user = "root";
+$password = ""; // por defecto en XAMPP está vacío
 $dbname = "unideal";
-$user = "neondb_owner";
-$password = "npg_pw0DCkord7VB";
 
-try {
-    $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    exit("Error de conexión: " . $e->getMessage());
+$conn = new mysqli($host, $user, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
 }
 
-// Obtener filtros
-$provincia = $_GET['provincia'] ?? '';
-$localidad = $_GET['localidad'] ?? '';
-$tipo = $_GET['tipo'] ?? '';
+// Variables del formulario
+$provincia = isset($_GET['provincia']) ? $_GET['provincia'] : '';
+$localidad = isset($_GET['localidad']) ? $_GET['localidad'] : '';
+$tipo = isset($_GET['tipo']) ? $_GET['tipo'] : '';
 
-// Consulta base
-$sql = "SELECT u.acronimo
-        FROM universidades u
-        JOIN localidades l ON u.id_localidad = l.id_localidad
-        JOIN provincias p ON l.id_provincia = p.id_provincia
-        WHERE 1=1";
+// Construcción dinámica de la consulta
+$query = "SELECT u.Acronimo
+          FROM universidades u
+          INNER JOIN localidades l ON u.ID_Localidad = l.ID_Localidad
+          INNER JOIN provincias p ON l.ID_Provincia = p.ID_Provincia
+          WHERE 1=1";
 
-$params = [];
-
-if ($provincia !== '') {
-    $sql .= " AND p.id_provincia = :provincia";
-    $params[':provincia'] = $provincia;
+if (!empty($provincia)) {
+    $query .= " AND p.ID_Provincia = " . intval($provincia);
 }
-if ($localidad !== '') {
-    $sql .= " AND u.id_localidad = :localidad";
-    $params[':localidad'] = $localidad;
+if (!empty($localidad)) {
+    $query .= " AND l.ID_Localidad = " . intval($localidad);
 }
-if ($tipo !== '') {
-    $sql .= " AND u.tipo = :tipo";
-    $params[':tipo'] = $tipo;
+if (!empty($tipo)) {
+    $query .= " AND u.Tipo = '" . $conn->real_escape_string($tipo) . "'";
 }
 
-$stmt = $pdo->prepare($sql);
-$stmt->execute($params);
+$result = $conn->query($query);
 
-if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    // Acrónimo encontrado
-    $acronimo = $row['acronimo'];
+// 🔹 Mapa manual de acrónimos → páginas locales
+$links = [
+    "UNLAM"  => "../HTML/unlam.html",
+    "UTN"    => "../HTML/utn.html",
+    "UNAHUR" => "../HTML/unahur.html",
+    "UNO"    => "../HTML/uno.html",
+    "UNTREF" => "../HTML/untref.html",
+    "UNM"    => "../HTML/unm.html",
+    "UM"     => "../HTML/moron.html",
+    "CUDI"   => "../HTML/cudi.html"
+];
 
-    // Aquí vos podés definir manualmente la URL según el acrónimo
-    switch ($acronimo) {
-        case 'UBA':
-            $pagina = 'https://www.uba.ar';
-            break;
-        case 'UNLP':
-            $pagina = 'https://www.unlp.edu.ar';
-            break;
-        default:
-            $pagina = 'https://www.ejemplo.com';
-            break;
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $acronimo = $row['Acronimo'];
+
+    if (isset($links[$acronimo])) {
+        // 🔹 Redirige directo a la página definida en el mapa
+        header("Location: " . $links[$acronimo]);
+        exit();
+    } else {
+        echo "No hay una página definida para el acrónimo: " . htmlspecialchars($acronimo);
     }
-
-    header("Location: $pagina");
-    exit();
 } else {
-    exit("No se encontró ninguna universidad con esos filtros.");
+    echo "No se encontraron resultados.";
 }
+
+$conn->close();
 ?>
