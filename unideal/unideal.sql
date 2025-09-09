@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2025 a las 06:28:15
+-- Tiempo de generación: 09-09-2025 a las 09:50:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -31,6 +31,22 @@ CREATE TABLE `areas` (
   `ID_Area` int(11) NOT NULL,
   `Nombre_Area` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `areas`
+--
+
+INSERT INTO `areas` (`ID_Area`, `Nombre_Area`) VALUES
+(1, 'Ingeniería y Tecnología'),
+(2, 'Ciencias Exactas y Naturales'),
+(3, 'Ciencias Sociales y Humanidades'),
+(4, 'Ciencias de la Salud'),
+(5, 'Ciencias Económicas y Administrativas'),
+(6, 'Ciencias Jurídicas'),
+(7, 'Educación'),
+(8, 'Arte y Diseño'),
+(9, 'Ciencias Agrarias y Veterinarias'),
+(10, 'Informática y Computación');
 
 -- --------------------------------------------------------
 
@@ -148,6 +164,20 @@ CREATE TABLE `localidades` (
   `Nombre_Localidad` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `localidades`
+--
+
+INSERT INTO `localidades` (`ID_Localidad`, `ID_Provincia`, `Nombre_Localidad`) VALUES
+(1, 1, 'San Justo'),
+(2, 1, 'Haedo'),
+(3, 1, 'Hurlingham'),
+(4, 1, 'Merlo'),
+(5, 1, 'Tres de Febrero'),
+(6, 1, 'Moreno'),
+(7, 1, 'Moron'),
+(8, 1, 'González Catán');
+
 -- --------------------------------------------------------
 
 --
@@ -250,6 +280,13 @@ CREATE TABLE `provincias` (
   `Nombre_Provincia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `provincias`
+--
+
+INSERT INTO `provincias` (`ID_Provincia`, `Nombre_Provincia`) VALUES
+(1, 'Buenos Aires');
+
 -- --------------------------------------------------------
 
 --
@@ -298,6 +335,20 @@ CREATE TABLE `universidades` (
   `Tipo` varchar(40) DEFAULT NULL,
   `URL_Web` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `universidades`
+--
+
+INSERT INTO `universidades` (`ID_Universidad`, `ID_Localidad`, `Nombre_Universidad`, `Acronimo`, `Tipo`, `URL_Web`) VALUES
+(1, 1, 'Universidad Nacional de La Matanza', 'UNLAM', 'Pública', 'https://www.unlam.edu.ar/'),
+(2, 2, 'Universidad Tecnológica Nacional', 'UTN', 'Pública', 'https://www.utn.edu.ar/es/'),
+(3, 3, 'Universidad Nacional de Hurlingham', 'UNAHUR', 'Pública', 'https://unahur.edu.ar/'),
+(4, 4, 'Universidad Nacional del Oeste', 'UNO', 'Pública', 'https://uno.edu.ar/'),
+(5, 5, 'Universidad Nacional de Tres de Febrero', 'UNTREF', 'Pública', 'https://untref.edu.ar/'),
+(6, 6, 'Universidad Nacional de Moreno', 'UNM', 'Pública', 'https://www.unm.edu.ar/'),
+(7, 7, 'Universidad Nacional de Moron', 'UM', 'Pública', 'https://unimoron.edu.ar/'),
+(8, 8, 'Centro universitario de La Matanza', 'CUDI', 'Pública', 'https://www.cudi.ar/');
 
 -- --------------------------------------------------------
 
@@ -472,7 +523,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `ID_Area` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Area` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `carreras`
@@ -508,7 +559,7 @@ ALTER TABLE `foro`
 -- AUTO_INCREMENT de la tabla `localidades`
 --
 ALTER TABLE `localidades`
-  MODIFY `ID_Localidad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Localidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `materias`
@@ -538,7 +589,7 @@ ALTER TABLE `pregrados`
 -- AUTO_INCREMENT de la tabla `provincias`
 --
 ALTER TABLE `provincias`
-  MODIFY `ID_Provincia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Provincia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `respuestas`
@@ -556,7 +607,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `universidades`
 --
 ALTER TABLE `universidades`
-  MODIFY `ID_Universidad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Universidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

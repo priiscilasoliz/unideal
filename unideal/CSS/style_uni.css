@@ -255,7 +255,7 @@ nav a:hover {
     display: grid;
     gap: 20px; /* Espacio entre tarjetas */
     max-width: 900px;
-    margin: 0 auto;
+    margin: 40px auto;
     justify-items: center; /* Centra las tarjetas en el contenedor */
 }
 
@@ -328,29 +328,3 @@ nav a:hover {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
-.boton-siguiente {
-    background-color: #f0f8ff; /* Fondo azul claro */
-    color: #00274d; /* Texto en azul oscuro */
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: underline;
-    display: inline-flex;
-    align-items: center;
-}
-
-.boton-siguiente .icono {
-    margin-left: 5px; /* Espacio entre texto e ícono */
-    height: 20px; /* Tamaño del ícono ajustable */
-}
-
-.boton-siguiente:hover {
-    background-color: #e6f2ff; /* Fondo más claro al pasar el cursor */
-} 
-  
