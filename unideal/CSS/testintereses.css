@@ -249,39 +249,80 @@ nav a:hover {
 #sombra.input-shadow{
   display: none;
 }
-/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
-.container {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-}
-h1, h2 {
-    color: #4A90E2;
-    text-align: center;
+
+.test-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
 }
 
-.fotodeuniversidad { 
-    display: block;
-    margin: 40px auto;
-    max-width: 90%;
-    height: auto; /* mantiene proporciones */
-    border-radius: 8px;
-}
-
-.carreras {
-    margin-top: 20px;
-}
-.carreras h3 {
-    color: #4A90E2;
-    margin-bottom: 10px;
-}
-ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-ul li {
-    margin-bottom: 5px;
-}
-p{
+.test-container h2 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-weight: bold;
+}
+
+button {
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  background: #4A9FE3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #357bb8;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #eaf4ff;
+  border: 1px solid #bcdffb;
+  border-radius: 8px;
+  font-size: 16px;
+  display: none;
+}
+/* Íconos y botón */
+.nave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.nave img {
+  height: 20px; /* Tamaño de los íconos */
+}
+
+/*pie*/
+.footer {
+  background-color: #4A90E2; 
+  color: #D0E6F8; /*texto*/
+  text-align: center; /* Centrar el texto */
+  padding: 10px 0; /* Espaciado vertical */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px; /* Tamaño de la fuente */
+  height: 60px;
+  bottom: 0; /* Posiciona al fondo */
+  width: 100%; /* Ancho completo */
+  font-weight: bold;
 }

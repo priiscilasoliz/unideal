@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UZO - Orientación Vocacional</title>
-  <link rel="stylesheet" href="../CSS/unlamstyle.css">
+  <link rel="stylesheet" href="../CSS/testintereses.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -35,55 +35,41 @@
     <a href="register.html" class="btn-registrar" style="text-decoration: none; color: white;">Registrarse</a>
   </div>
 </header>
-  <main>
-    <div class="container">
-        <h1>Universidad Nacional de Moreno (UNM)</h1>
-        <p>
-            Fundada en 1989, se encuentra en San Justo y es una de las principales universidades del oeste bonaerense. Cuenta con un campus de 40 hectáreas.
-        </p>
-        <img src="../imagenes/morenopt2.png" alt="Campus de la Universidad de Hurlingham" class="fotodeuniversidad">
-        
-        <div class="carreras">
-            <h2>Carreras:</h2>
-            <p>La UNM se orienta hacia el desarrollo social y económico de la región, priorizando carreras en áreas estratégicas como biotecnología, comunicación y tecnología:</p>
-            <h3>Ciencias y Tecnología:</h3>
-            <ul>
-                <li>Ingeniería Industrial​</li>
-                <li>Licenciatura en Biotecnología</li>
-            </ul>
+<main>
+    <section class="test-container">
+    <h2>Test de Intereses</h2>
+    <form id="interestTest">
+        <div class="question">
+        <p>1. ¿Qué actividad disfrutas más?</p>
+        <label><input type="radio" name="q1" value="tecnologia"> Programar o usar tecnología</label><br>
+        <label><input type="radio" name="q1" value="arte"> Dibujar, diseñar o crear cosas</label><br>
+        <label><input type="radio" name="q1" value="social"> Ayudar y escuchar a otras personas</label><br>
+        <label><input type="radio" name="q1" value="empresarial"> Planear proyectos y negocios</label>
+        </div>
 
-            <h3>Comunicación y Ciencias Sociales:</h3>
-            <ul>
-                <li>Licenciatura en Comunicación Social​</li>
-                <li>Licenciatura en Trabajo Social</li>
-            </ul>
-            
-            <h3>Economía y Gestión:</h3>
-            <ul>
-                <li>Contador Público​</li>
-                <li>Licenciatura en Administración​</li>
-            </ul>
+        <div class="question">
+        <p>2. ¿Qué materia escolar disfrutas más?</p>
+        <label><input type="radio" name="q2" value="tecnologia"> Matemática / Informática</label><br>
+        <label><input type="radio" name="q2" value="arte"> Arte / Literatura</label><br>
+        <label><input type="radio" name="q2" value="social"> Psicología / Historia</label><br>
+        <label><input type="radio" name="q2" value="empresarial"> Economía / Administración</label>
+        </div>
 
+        <div class="question">
+        <p>3. ¿Cómo te gustaría trabajar en el futuro?</p>
+        <label><input type="radio" name="q3" value="tecnologia"> Desarrollando software o tecnología</label><br>
+        <label><input type="radio" name="q3" value="arte"> Creando obras, diseños o contenidos</label><br>
+        <label><input type="radio" name="q3" value="social"> En contacto directo ayudando a personas</label><br>
+        <label><input type="radio" name="q3" value="empresarial"> Dirigiendo equipos o emprendiendo</label>
+        </div>
 
-        <h2>Modalidades Disponibles y Datos de Contacto</h2>
-        <h3>Modalidades de Estudio:</h3>
-        <ul>
-            <li>Presencial, con algunas opciones híbridas en cursos específicos</li>
-        </ul>
-        <h3>Contacto:</h3>
-        <ul>
-            <li>Página web: www.unm.edu.ar</li>
-            <li>Dirección: Av. Bartolomé Mitre 1891, Moreno, Buenos Aires</li>
-            <li>Teléfono: (011) 0237-466-7186</li>
-        </ul>
-    </div>
-    <div class="navegacion">
-        <a href="../index.html" class="boton-siguiente">
-            <img src="../imagenes/ArrowBack.png" alt="Flecha derecha" class="icono">
-        </a>
-      </div>
-    </main>
-      <footer class="footer">
+        <button type="button" onclick="calculateResult()">Enviar</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+</section>
+</main>
+  <footer class="footer">
   <div class="container">
     <div class="footer-content">
 
@@ -134,7 +120,8 @@
     </div>
   </div>
 </footer>
-<script src="JS/toggle-buscador.js"></script>
-<script src="JS/buscador.js"></script>
+<script src="../JS/testintereses.js"></script>
+<script src="../JS/toggle-buscador.js"></script>
+<script src="../JS/buscador.js"></script>
 </body>
 </html>

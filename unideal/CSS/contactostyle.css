@@ -74,16 +74,69 @@ nav a:hover {
 
 /*pie*/
 .footer {
-  background-color: #4A90E2; 
-  color: #D0E6F8; 
-  text-align: center; 
-  padding: 10px 0; 
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px; 
-  height: 60px;
-  bottom: 0; 
-  width: 100%; 
-  font-weight: bold;
+  background-color: #4A9FE3;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #dceeff;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
 }
 
 /* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
