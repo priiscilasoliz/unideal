@@ -313,16 +313,3 @@ button:hover {
   height: 20px; /* Tamaño de los íconos */
 }
 
-/*pie*/
-.footer {
-  background-color: #4A90E2; 
-  color: #D0E6F8; /*texto*/
-  text-align: center; /* Centrar el texto */
-  padding: 10px 0; /* Espaciado vertical */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px; /* Tamaño de la fuente */
-  height: 60px;
-  bottom: 0; /* Posiciona al fondo */
-  width: 100%; /* Ancho completo */
-  font-weight: bold;
-}
