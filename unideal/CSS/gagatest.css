@@ -500,6 +500,10 @@ select::after {
   margin: 30px auto;
 }
 
+.universidades-destacadas h2{
+  color: #4A90E2;
+}
+
 .universidades-container {
   display: flex;
   flex-wrap: wrap;
