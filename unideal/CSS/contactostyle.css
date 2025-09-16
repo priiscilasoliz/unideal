@@ -3,7 +3,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     background: linear-gradient(to bottom, #D0E6F8, #ffffff);
-}
+  }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -41,10 +42,12 @@ header {
 .btn-registrar:hover {
   background-color: #0056b3;
 }
+
+/* Navegación */
 nav {
   flex-grow: 1;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centra los enlaces horizontalmente */
   gap: 20px;
 }
 
@@ -57,19 +60,21 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;  
-  color: #007bff;           
+  text-decoration: underline;  /* Subraya el texto */
+  color: #007bff;             /* Puedes cambiar el color del texto al hacer hover */
 }
 
 /* Íconos y botón */
 .nave {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
 }
 
 .nave img {
-  height: 20px; 
+  height: 20px; /* Tamaño de los íconos */
 }
 
 /*pie*/
@@ -78,6 +83,7 @@ nav a:hover {
   color: white;
   padding: 30px 0;
   font-family: Arial, sans-serif;
+  margin-top: 30px;
 }
 
 .footer .container {
@@ -139,6 +145,111 @@ nav a:hover {
   font-size: 14px;
 }
 
+#buscador-container {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.buscador-wrapper {
+  position: relative;
+  width: 220px;
+  z-index: 100;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.icono-busqueda {
+  height: 20px;
+  cursor: pointer;
+}
+
+.buscador-wrapper {
+  position: absolute;
+  top: 40px; /* ajustá si querés que baje más */
+  right: 60px; /* empuja hacia la izquierda desde el borde derecho */
+  width: 300px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+#buscador {
+  width: 100%;
+  padding: 8px 0px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  box-shadow: none;
+  outline: none;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+#sombra.input-shadow{
+  display: none;
+}
 /* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
 /* Mainnn*/
 .main-section {

@@ -14,16 +14,28 @@
   </a>
   <nav>
     <a href="../index.html">Inicio</a>
-    <a href="universidades.html">Universidades</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="../HTML/universidades.html">Universidades</a>
+    <a href="../HTML/testintereses.html">Test de Intereses</a>
+    <a href="../HTML/contacto.html">Contacto</a>
   </nav>
   <div class="nave">
-    <a href="universidades.html"><img src="../imagenes/search.png" alt="Buscar"></a>
+    <!-- Ícono lupa -->
+    <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+
+    <!-- Contenedor de búsqueda oculto -->
+    <div id="buscador-container" class="buscador-wrapper oculto">
+      <div class="input-wrapper">
+        <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
+        <div id="sombra" class="input-shadow"></div>
+      </div>
+      <div id="sugerencias" class="autocomplete-box"></div>
+    </div>
+
+    <!-- Otros íconos -->
     <a href="#"><img src="../imagenes/user.png" alt="Usuario"></a>
-    <a href="register.html" class="btn-registrar" style="text-decoration: none; color: white;">Registrarse</a>
+    <a href="login_register.html" class="btn-registrar" style="text-decoration: none; color: white;">Registrarse</a>
   </div>
 </header>
-
 <main>
   <section class="main-section">
       <div class="image-container">
@@ -43,7 +55,7 @@
       <!-- Logo -->
       <div class="footer-section">
         <div class="footer-logo">
-          <a href="#">
+          <a href="../index.html">
             <img src="../imagenes/logo.png" alt="UZO Logo">
           </a>
         </div>
@@ -55,7 +67,7 @@
         <h4>UZO</h4>
         <ul>
           <li><a href="#">Sobre Nosotros</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
           <li><a href="#">Términos de Servicio</a></li>
           <li><a href="#">Política de Privacidad</a></li>
         </ul>
@@ -65,8 +77,8 @@
       <div class="footer-section">
         <h4>Recursos</h4>
         <ul>
-          <li><a href="#">Test de Intereses</a></li>
-          <li><a href="#">Listado de Universidades</a></li>
+          <li><a href="testintereses.html">Test de Intereses</a></li>
+          <li><a href="universidades.html">Listado de Universidades</a></li>
           <li><a href="#">Guías y Consejos</a></li>
           <li><a href="#">Preguntas Frecuentes</a></li>
         </ul>
@@ -87,6 +99,6 @@
     </div>
   </div>
 </footer>
-<script src="JS/toggle-buscador.js"></script>
-<script src="JS/buscador.js"></script>
+<script src="../JS/toggle-buscador.js"></script>
+<script src="../JS/buscador.js"></script>
 </html>

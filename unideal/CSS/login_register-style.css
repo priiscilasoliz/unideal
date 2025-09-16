@@ -77,20 +77,6 @@ nav a:hover {
   height: 20px; /* Tamaño de los íconos */
 }
 
-/*pie*/
-.footer {
-  background-color: #4A90E2; 
-  color: #D0E6F8; /*texto*/
-  text-align: center; /* Centrar el texto */
-  padding: 10px 0; /* Espaciado vertical */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px; /* Tamaño de la fuente */
-  height: 60px;
-  bottom: 0; /* Posiciona al fondo */
-  width: 100%; /* Ancho completo */
-  font-weight: bold;
-}
-
 #buscador-container {
   position: absolute;
   top: 40px;
@@ -198,7 +184,7 @@ nav a:hover {
 }
 /* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
 
-.container {
+.containers {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -211,33 +197,33 @@ nav a:hover {
   margin: 50px auto; /* Centrado en la pantalla */
 }
 
-.form-container {
+.form-containers {
   position: absolute;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
 
-.sign-in-container {
+.sign-in-containers {
   left: 0;
   width: 50%;
   z-index: 2;
 }
 
-.sign-up-container {
+.sign-up-containers {
   left: 0;
   width: 50%;
   opacity: 0;
   z-index: 1;
 }
 
-.container.right-panel-active .sign-up-container {
+.containers.right-panel-active .sign-up-containers {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
 }
 
-.container.right-panel-active .sign-in-container {
+.containers.right-panel-active .sign-in-containers {
   transform: translateX(100%);
   opacity: 0;
   z-index: 1;
@@ -279,7 +265,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-.overlay-container {
+.overlay-containers {
   position: absolute;
   top: 0;
   left: 50%;
@@ -290,7 +276,7 @@ button:hover {
   z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
+.containers.right-panel-active .overlay-containers {
   transform: translateX(-100%);
 }
 
@@ -306,7 +292,7 @@ button:hover {
   transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay {
+.containers.right-panel-active .overlay {
   transform: translateX(50%);
 }
 
@@ -329,7 +315,7 @@ button:hover {
   transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.containers.right-panel-active .overlay-left {
   transform: translateX(-10%);
 }
 
@@ -338,7 +324,7 @@ button:hover {
   transform: translateX(10%);
 }
 
-.container.right-panel-active .overlay-right {
+.containers.right-panel-active .overlay-right {
   transform: translateX(20%);
 }
 
@@ -358,3 +344,70 @@ button:hover {
   background-color: rgba(255,255,255,0.1);
 }
 
+/*pie*/
+.footer {
+  background-color: #4A9FE3;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #dceeff;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}

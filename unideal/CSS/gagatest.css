@@ -189,7 +189,7 @@ nav a:hover {
     align-items: center;
     width: 80%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px auto;
   }
   
 .texto {
@@ -265,7 +265,7 @@ nav a:hover {
   gap: 15px; /* Separación entre los filtros */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
   max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: 40px auto; /* Espacio arriba y abajo + centrado horizontal */
+  margin: 40px auto;
 }
 
 /* Cada cuadro de filtro */
@@ -348,7 +348,8 @@ select::after {
   gap: 100px; /* Espacio entre la imagen y el texto */
   padding: 20px; /* Espaciado interno */
   max-width: 1200px; /* Limita el ancho máximo de la sección */
-  margin: 0 auto; /* Centra la sección horizontalmente */
+  margin: 30px auto;
+  margin-top:45px;
 }
 
 /* Imagen en la sección "descubre" */
@@ -496,6 +497,7 @@ select::after {
 .universidades-destacadas {
   text-align: center;
   padding: 20px;
+  margin: 30px auto;
 }
 
 .universidades-container {
@@ -557,6 +559,7 @@ select::after {
   color: white;
   padding: 30px 0;
   font-family: Arial, sans-serif;
+  margin-top: 45px;
 }
 
 .footer .container {
