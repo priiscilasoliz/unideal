@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-09-2025 a las 09:50:41
+-- Tiempo de generación: 18-09-2025 a las 04:36:29
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -46,7 +46,8 @@ INSERT INTO `areas` (`ID_Area`, `Nombre_Area`) VALUES
 (7, 'Educación'),
 (8, 'Arte y Diseño'),
 (9, 'Ciencias Agrarias y Veterinarias'),
-(10, 'Informática y Computación');
+(10, 'Informática y Computación'),
+(11, 'Arquitectura y Urbanismo');
 
 -- --------------------------------------------------------
 
@@ -63,6 +64,35 @@ CREATE TABLE `carreras` (
   `Requisitos` varchar(255) DEFAULT NULL,
   `URL_Carrera` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `carreras`
+--
+
+INSERT INTO `carreras` (`ID_Carrera`, `ID_Universidad`, `ID_Area`, `Nombre_Carrera`, `Duracion`, `Requisitos`, `URL_Carrera`) VALUES
+(1, 1, 5, 'Contador Público', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/contador-publico/'),
+(2, 1, 5, 'Licenciatura en Administración', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/contador-publico/'),
+(3, 1, 5, 'Licenciatura en Comercio Internacional', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/licenciatura-en-comercio-internacional/'),
+(4, 1, 5, 'Licenciatura en Economía', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/licenciatura-en-economia/'),
+(5, 1, 4, 'Licenciatura en Enfermería', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/licenciatura-en-enfermeria/'),
+(6, 1, 4, 'Licenciatura en Nutrición', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/nutricion/'),
+(7, 1, 4, 'Licenciatura en Kinesiología y Fisiatría', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/licenciatura-en-kinesiologia-y-fisiatria/'),
+(8, 1, 1, 'Ingeniería Mecánica', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/ingenieria-mecanica/'),
+(9, 1, 1, 'Ingeniería en Informática', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/ingenieria-en-informatica/'),
+(10, 1, 1, 'Ingeniería Industrial', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/ingenieria-industrial/'),
+(11, 1, 3, 'Licenciatura en Trabajo Social', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/licenciatura-en-trabajo-social/'),
+(12, 1, 3, 'Profesorado de Educación Física', '4 años', 'null', 'https://www.unlam.edu.ar/academicas/profesorado-de-educacion-fisica/'),
+(13, 1, 3, 'Licenciatura en Relaciones Públicas', '4 años', 'null', 'https://www.unlam.edu.ar/academicas/licenciatura-en-relaciones-publicas/'),
+(14, 1, 6, 'Abogacía', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/abogacia/'),
+(15, 1, 6, 'Licenciatura en Ciencia Política', '5 años', 'null', 'https://www.unlam.edu.ar/academicas/licenciatura-en-ciencia-politica/'),
+(16, 1, 11, 'Arquitectura', '6 años', 'null', 'https://www.unlam.edu.ar/academicas/arquitectura/'),
+(17, 2, 1, 'Ingeniería Electrónica', '5 años y medio', 'null', 'https://frh.utn.edu.ar/carreras/ingenieria-electronica/'),
+(18, 2, 1, 'Ingeniería Industrial', '5 años', 'null', 'https://frh.utn.edu.ar/carreras/ingenieria-industrial/'),
+(19, 2, 1, 'Ingeniería Mecánica', '5 años', 'null', 'https://frh.utn.edu.ar/carreras/ingenieria-mecanica/'),
+(20, 2, 1, 'Ingeniería Ferroviaria', '5 años y medio', 'null', 'https://frh.utn.edu.ar/carreras/ingenieria-ferroviaria/'),
+(21, 2, 1, 'Ingeniería Aeronáutica / Aeroespacial', '5 años', 'null', 'https://frh.utn.edu.ar/carreras/ingenieria-aeronautica-aeroespacial/'),
+(22, 2, 1, 'Bioingeniería', '5 años', 'null', 'https://frh.utn.edu.ar/carreras/bioingenieria/'),
+(23, 3, 4, 'Licenciatura en Kinesiología y Fisiatría', '4 años', 'null', 'https://unahur.edu.ar/licenciatura-en-kinesiologia-y-fisiatria/');
 
 -- --------------------------------------------------------
 
@@ -342,12 +372,12 @@ CREATE TABLE `universidades` (
 
 INSERT INTO `universidades` (`ID_Universidad`, `ID_Localidad`, `Nombre_Universidad`, `Acronimo`, `Tipo`, `URL_Web`) VALUES
 (1, 1, 'Universidad Nacional de La Matanza', 'UNLAM', 'Pública', 'https://www.unlam.edu.ar/'),
-(2, 2, 'Universidad Tecnológica Nacional', 'UTN', 'Pública', 'https://www.utn.edu.ar/es/'),
+(2, 2, 'Universidad Tecnológica Nacional de Haedo', 'UTN', 'Pública', 'https://frh.utn.edu.ar/'),
 (3, 3, 'Universidad Nacional de Hurlingham', 'UNAHUR', 'Pública', 'https://unahur.edu.ar/'),
 (4, 4, 'Universidad Nacional del Oeste', 'UNO', 'Pública', 'https://uno.edu.ar/'),
 (5, 5, 'Universidad Nacional de Tres de Febrero', 'UNTREF', 'Pública', 'https://untref.edu.ar/'),
 (6, 6, 'Universidad Nacional de Moreno', 'UNM', 'Pública', 'https://www.unm.edu.ar/'),
-(7, 7, 'Universidad Nacional de Moron', 'UM', 'Pública', 'https://unimoron.edu.ar/'),
+(7, 7, 'Universidad Nacional de Morón', 'UM', 'Pública', 'https://unimoron.edu.ar/'),
 (8, 8, 'Centro universitario de La Matanza', 'CUDI', 'Pública', 'https://www.cudi.ar/');
 
 -- --------------------------------------------------------
@@ -523,13 +553,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `ID_Area` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID_Area` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `carreras`
 --
 ALTER TABLE `carreras`
-  MODIFY `ID_Carrera` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Carrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
