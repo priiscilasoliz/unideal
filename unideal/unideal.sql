@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-09-2025 a las 04:36:29
+-- Tiempo de generación: 26-09-2025 a las 23:55:19
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -92,7 +92,11 @@ INSERT INTO `carreras` (`ID_Carrera`, `ID_Universidad`, `ID_Area`, `Nombre_Carre
 (20, 2, 1, 'Ingeniería Ferroviaria', '5 años y medio', 'null', 'https://frh.utn.edu.ar/carreras/ingenieria-ferroviaria/'),
 (21, 2, 1, 'Ingeniería Aeronáutica / Aeroespacial', '5 años', 'null', 'https://frh.utn.edu.ar/carreras/ingenieria-aeronautica-aeroespacial/'),
 (22, 2, 1, 'Bioingeniería', '5 años', 'null', 'https://frh.utn.edu.ar/carreras/bioingenieria/'),
-(23, 3, 4, 'Licenciatura en Kinesiología y Fisiatría', '4 años', 'null', 'https://unahur.edu.ar/licenciatura-en-kinesiologia-y-fisiatria/');
+(23, 3, 4, 'Licenciatura en Kinesiología y Fisiatría', '4 años', 'null', 'https://unahur.edu.ar/licenciatura-en-kinesiologia-y-fisiatria/'),
+(24, 3, 4, 'Licenciatura en Enfermería', '5 años', 'null', 'https://unahur.edu.ar/licenciatura-en-enfermeria/'),
+(25, 3, 1, 'Ingeniería en Energía Eléctrica', '5 años', 'null', 'https://unahur.edu.ar/ingenieria-electrica/'),
+(26, 4, 7, 'Profesorado Universitario en Informática', '4 años', 'null', 'https://www.uno.edu.ar/oferta-academica/grado/profesorado-universitario-en-informatica.html'),
+(27, 4, 4, 'Odontología', '5 años', 'null', 'https://www.uno.edu.ar/oferta-academica/grado/odontologia.html');
 
 -- --------------------------------------------------------
 
@@ -559,7 +563,7 @@ ALTER TABLE `areas`
 -- AUTO_INCREMENT de la tabla `carreras`
 --
 ALTER TABLE `carreras`
-  MODIFY `ID_Carrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `ID_Carrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
