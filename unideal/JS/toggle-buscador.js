@@ -7,10 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("click", (e) => {
-    if (
-      !iconoBusqueda.contains(e.target) &&
-      !contenedorBuscador.contains(e.target)
-    ) {
+    if (!iconoBusqueda.contains(e.target) && !contenedorBuscador.contains(e.target)) {
       contenedorBuscador.classList.add("oculto");
     }
   });
