@@ -1,51 +1,84 @@
 <?php
-// Configuración de conexión a la base de datos
-$host = "localhost";
-$usuario = "root";
-$contrasena = "";
-$base_de_datos = "unideal";
-
-// Conectar a la base de datos
-$conn = new mysqli($host, $usuario, $contrasena, $base_de_datos);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+$conexion = new mysqli("localhost", "root", "", "unideal");
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
 }
 
-// Obtener el término de búsqueda
-$q = isset($_GET['q']) ? $conn->real_escape_string($_GET['q']) : "";
+$q = isset($_GET['q']) ? trim($conexion->real_escape_string($_GET['q'])) : '';
 
-// Inicializar resultados
-$resultados = [];
+$basePath = "/unideal/unideal/HTML/"; // ajustá si tu proyecto se llama distinto
 
-if (strlen($q) >= 2) {
-    $sql = "SELECT Nombre_Universidad, Acronimo 
-            FROM universidades 
-            WHERE Nombre_Universidad LIKE '%$q%' OR Acronimo LIKE '%$q%'
-            LIMIT 10";
+$links = [
+    "UNLAM"  => $basePath . "unlam.html",
+    "UTN"    => $basePath . "utn.html",
+    "UNAHUR" => $basePath . "unahur.html",
+    "UNO"    => $basePath . "uno.html",
+    "UNTREF" => $basePath . "untref.html",
+    "UNM"    => $basePath . "unm.html",
+    "UM"     => $basePath . "moron.html",
+    "CUDI"   => $basePath . "cudi.html"
+];
 
-    $res = $conn->query($sql);
+$sugerencias = [];
 
-    // Verificar que la consulta no haya fallado
-    if (!$res) {
-        echo json_encode(["error_sql" => $conn->error]);
-    } else {
-        while ($fila = $res->fetch_assoc()) {
-            $nombre = $fila["Nombre_Universidad"];
-            $acronimo = $fila["Acronimo"];
-            $resultados[] = "$nombre ($acronimo)";
+if ($q !== '') {
+    // 🔹 Buscar universidades
+    $sql_uni = "
+        SELECT Nombre_Universidad, Acronimo
+        FROM universidades
+        WHERE Nombre_Universidad LIKE '%$q%' COLLATE utf8mb4_general_ci
+           OR Acronimo LIKE '%$q%' COLLATE utf8mb4_general_ci
+        LIMIT 15
+    ";
+
+    $res_uni = $conexion->query($sql_uni);
+    if ($res_uni && $res_uni->num_rows > 0) {
+        while ($row = $res_uni->fetch_assoc()) {
+            $nombre = $row['Nombre_Universidad'];
+            $acronimo = $row['Acronimo'];
+            $url = $links[$acronimo] ?? '#';
+
+            $sugerencias[] = [
+                'nombre' => $nombre,
+                'acronimo' => $acronimo,
+                'url' => $url,
+                'tipo' => 'universidad'
+            ];
         }
-
-        // Devolver resultados en formato JSON
-        header('Content-Type: application/json');
-        echo json_encode($resultados);
     }
-} else {
-    // Si no hay suficientes caracteres, devolver array vacío
-    echo json_encode([]);
+
+    // 🔹 Buscar carreras (usando tus columnas reales)
+    $sql_carr = "
+        SELECT c.Nombre_Carrera, u.Acronimo, c.URL_Carrera
+        FROM carreras c
+        INNER JOIN universidades u ON c.ID_Universidad = u.ID_Universidad
+        WHERE c.Nombre_Carrera LIKE '%$q%' COLLATE utf8mb4_general_ci
+        LIMIT 25
+    ";
+
+    $res_carr = $conexion->query($sql_carr);
+    if ($res_carr && $res_carr->num_rows > 0) {
+        while ($row = $res_carr->fetch_assoc()) {
+            $nombre = $row['Nombre_Carrera'];
+            $acronimo = $row['Acronimo'];
+            $url = $row['URL_Carrera'];
+
+            // Si no tiene URL, mandamos al HTML de la universidad
+            if (empty($url)) {
+                $url = $links[$acronimo] ?? '#';
+            }
+
+            $sugerencias[] = [
+                'nombre' => $nombre,
+                'acronimo' => $acronimo,
+                'url' => $url,
+                'tipo' => 'carrera'
+            ];
+        }
+    }
 }
 
-// Cerrar conexión
-$conn->close();
+header('Content-Type: application/json; charset=utf-8');
+echo json_encode($sugerencias, JSON_UNESCAPED_UNICODE);
+$conexion->close();
 ?>

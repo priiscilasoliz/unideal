@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buscador.addEventListener("input", async () => {
     const query = buscador.value.trim();
-
-    sombra.textContent = ""; // Reset
+    sombra.textContent = "";
 
     if (query.length < 2) {
       sugerencias.innerHTML = "";
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const rutas = ['PHP/buscador.php', '../PHP/buscador.php'];
+    const rutas = ["PHP/buscador.php", "../PHP/buscador.php"];
     let data = null;
 
     for (const ruta of rutas) {
@@ -37,25 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Mostrar sugerencia fantasma (primera coincidencia)
-    const primera = data[0];
+    const primera = data[0].nombre;
     if (primera.toLowerCase().startsWith(query.toLowerCase())) {
       sombra.textContent = primera;
-    } else {
-      sombra.textContent = "";
     }
 
-    data.forEach(universidad => {
+    data.forEach((item) => {
       const div = document.createElement("div");
       div.classList.add("sugerencia-item");
-      div.textContent = universidad;
 
-      div.addEventListener("mousedown", (e) => {
-        e.preventDefault();
-        buscador.value = universidad;
-        sombra.textContent = "";
-        sugerencias.innerHTML = "";
-        sugerencias.style.display = "none";
+      // Mostrar carrera o universidad
+      if (item.tipo === "carrera") {
+        div.textContent = `${item.nombre} (${item.acronimo})`;
+      } else {
+        div.textContent = `${item.nombre} (${item.acronimo})`;
+      }
+
+      div.addEventListener("mousedown", () => {
+        window.location.href = item.url;
       });
 
       sugerencias.appendChild(div);
@@ -64,25 +62,19 @@ document.addEventListener("DOMContentLoaded", () => {
     sugerencias.style.display = "block";
   });
 
-  // Aceptar sugerencia fantasma con flecha derecha o Tab
   buscador.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight" || e.key === "Tab") {
-      const sombraTexto = sombra.textContent;
-      const inputTexto = buscador.value;
-
-      if (sombraTexto && sombraTexto.toLowerCase().startsWith(inputTexto.toLowerCase())) {
-        buscador.value = sombraTexto;
-        sombra.textContent = "";
-        sugerencias.innerHTML = "";
-        sugerencias.style.display = "none";
-        e.preventDefault(); // Evita que Tab se vaya del input
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const items = sugerencias.querySelectorAll(".sugerencia-item");
+      if (items.length > 0) {
+        items[0].click();
       }
     }
   });
 
- document.addEventListener("click", (e) => {
-    const contenedor = document.querySelector(".buscador-container");
-    if (!contenedor || !contenedor.contains(e.target)) {
+  document.addEventListener("click", (e) => {
+    const contenedor = document.getElementById("buscador-container");
+    if (!contenedor.contains(e.target)) {
       sugerencias.innerHTML = "";
       sugerencias.style.display = "none";
       sombra.textContent = "";
