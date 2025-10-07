@@ -556,6 +556,79 @@ select::after {
   background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
 }
 
+/* Sección de Preguntas Frecuentes */
+.faq {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.faq h2 {
+  text-align: center;
+  color: #4A90E2;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de cada pregunta */
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+/* Oculta los checkbox */
+.faq-item input {
+  display: none;
+}
+
+/* Título de cada pregunta */
+.faq-item label {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.faq-item label:hover {
+  color: #4A90E2;
+}
+
+/* Flechita al lado derecho */
+.faq-item label::after {
+  content: '➕';
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Contenido de la respuesta */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.faq-content p {
+  margin: 10px 0 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Cuando se abre la pregunta */
+.faq-item input:checked + label::after {
+  content: '➖';
+}
+
+.faq-item input:checked ~ .faq-content {
+  max-height: 200px; /* altura expandida */
+}
+
 
 /*pie*/
 .footer {
