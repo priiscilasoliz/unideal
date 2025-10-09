@@ -9,12 +9,10 @@ function calculateResult() {
     empresarial: 0
   };
 
-  // sumar votos
   for (let value of answers.values()) {
     scores[value]++;
   }
 
-  // encontrar el mayor
   let maxCategory = Object.keys(scores).reduce((a, b) => 
     scores[a] > scores[b] ? a : b
   );
@@ -35,7 +33,6 @@ function calculateResult() {
       break;
   }
 
-  // mostrar resultado
   const resultBox = document.getElementById("result");
   resultBox.innerHTML = `<strong>Resultado:</strong> ${resultText}`;
   resultBox.style.display = "block";

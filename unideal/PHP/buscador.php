@@ -6,7 +6,7 @@ if ($conexion->connect_error) {
 
 $q = isset($_GET['q']) ? trim($conexion->real_escape_string($_GET['q'])) : '';
 
-$basePath = "/unideal/unideal/HTML/"; // ajustá si tu proyecto se llama distinto
+$basePath = "/unideal/unideal/HTML/";
 
 $links = [
     "UNLAM"  => $basePath . "unlam.html",
@@ -22,7 +22,6 @@ $links = [
 $sugerencias = [];
 
 if ($q !== '') {
-    // 🔹 Buscar universidades
     $sql_uni = "
         SELECT Nombre_Universidad, Acronimo
         FROM universidades
@@ -47,7 +46,6 @@ if ($q !== '') {
         }
     }
 
-    // 🔹 Buscar carreras (usando tus columnas reales)
     $sql_carr = "
         SELECT c.Nombre_Carrera, u.Acronimo, c.URL_Carrera
         FROM carreras c
@@ -63,7 +61,6 @@ if ($q !== '') {
             $acronimo = $row['Acronimo'];
             $url = $row['URL_Carrera'];
 
-            // Si no tiene URL, mandamos al HTML de la universidad
             if (empty($url)) {
                 $url = $links[$acronimo] ?? '#';
             }

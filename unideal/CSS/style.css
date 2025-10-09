@@ -43,7 +43,7 @@ header {
   background-color: #0056b3;
 }
 
-/* Navegación */
+
 nav {
   flex-grow: 1;
   display: flex;
@@ -64,7 +64,7 @@ nav a:hover {
   color: #007bff;             
 }
 
-/* Íconos y botón */
+
 .nave {
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@ nav a:hover {
 }
 
 .nave img {
-  height: 20px; /* Tamaño de los íconos */
+  height: 20px;
 }
 
 
@@ -134,8 +134,8 @@ nav a:hover {
 
 .buscador-wrapper {
   position: absolute;
-  top: 40px; /* ajustá si querés que baje más */
-  right: 60px; /* empuja hacia la izquierda desde el borde derecho */
+  top: 40px;
+  right: 60px;
   width: 300px;
   z-index: 1000;
   background-color: #fff;
@@ -214,7 +214,7 @@ nav a:hover {
   }
 
 .btn {
-    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
@@ -257,114 +257,107 @@ nav a:hover {
     height: auto;
   }
 
-/* Fondo gris del contenedor principal */
 .filtros {
-  display: flex; /* Organización horizontal */
-  align-items: center; /* Centrar elementos verticalmente */
-  background-color: #D9D9D9; /* Fondo gris */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
-  gap: 15px; /* Separación entre los filtros */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: 40px auto; /* Espacio arriba y abajo + centrado horizontal */
+  display: flex;
+  align-items: center;
+  background-color: #D9D9D9;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
-/* Cada cuadro de filtro */
 .filtro {
-  display: flex; /* Ícono y texto en línea */
-  align-items: center; /* Centrado vertical */
-  background-color: #fff; /* Fondo blanco */
-  padding: 10px 15px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
-  border: 1px solid #ddd; /* Bordes ligeros */
-  flex-grow: 1; /* Ocupa el mismo espacio cada cuadro */
-  gap: 10px; /* Espacio entre ícono y texto */
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex-grow: 1;
+  gap: 10px;
   color: #1B3A57;
   font-weight: bold;
 }
 
-/* Texto dentro de los filtros */
 .filtro span {
   font-size: 14px;
-  color: #333; /* Color del texto */
+  color: #333;
 }
 
-/* Botón azul de buscar */
 .btn-buscar {
-  background-color: #4A90E2; /* Azul principal */
-  color: white; /* Texto blanco */
-  padding: 10px 20px; /* Espaciado interno */
-  border: none; /* Sin bordes */
-  border-radius: 8px; /* Bordes redondeados */
-  font-weight: bold; /* Texto en negrita */
+  background-color: #4A90E2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; 
+  font-weight: bold; 
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
-  cursor: pointer; /* Cursor de mano */
-  transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
 }
 
 .btn-buscar:hover {
-  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  background-color: #0056b3; 
 }
 
 select {
-  appearance: none; /* Elimina el estilo nativo */
-  -moz-appearance: none; /* Para Firefox */
-  -webkit-appearance: none; /* Para Chrome/Safari */
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Sin borde */
-  font-size: 14px; /* Tamaño de texto */
-  color: #333; /* Color del texto */
-  width: 100%; /* Ajusta al ancho del contenedor */
-  cursor: pointer; /* Cursor de mano */
+  appearance: none;
+  -moz-appearance: none; 
+  -webkit-appearance: none; 
+  background-color: transparent; 
+  border: none; 
+  font-size: 14px;
+  color: #333; 
+  width: 100%; 
+  cursor: pointer; 
 }
 
-/* Añadir un ícono indicador (flecha) */
 select::after {
-  content: '▼'; /* Símbolo de flecha */
+  content: '▼'; 
   font-size: 12px;
   position: absolute;
-  right: 10px; /* Alineación derecha */
-  pointer-events: none; /* No afecta el clic */
+  right: 10px; 
+  pointer-events: none; 
 }
 
-/* Estilo del contenedor del select */
 .filtro select {
-  padding: 8px; /* Espaciado interno */
+  padding: 8px;
   border:transparent;
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 5px;
   text-align: center;
   
 }
 
-/* Añade interactividad */
+
 .filtro select:focus {
-  outline: none; /* Sin borde de enfoque */
+  outline: none; 
   border-color: transparent;
 }
 
 .descubre {
-  display: flex; /* Organiza los elementos en línea horizontal */
-  align-items: center; /* Centra los elementos verticalmente */
-  gap: 100px; /* Espacio entre la imagen y el texto */
-  padding: 20px; /* Espaciado interno */
-  max-width: 1200px; /* Limita el ancho máximo de la sección */
-  margin: 0 auto; /* Centra la sección horizontalmente */
+  display: flex; 
+  align-items: center; 
+  gap: 100px; 
+  padding: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; /
 }
 
-/* Imagen en la sección "descubre" */
 .descubre .imagen2 {
   flex: 1;
   display: flex;
-  justify-content: center; /* Centra la imagen */
+  justify-content: center; 
 }
 
 .descubre .imagen2 img {
-  width: 595px; /* La imagen ocupa el 100% del contenedor de la imagen */
-  height: 416px; /* Mantiene la proporción de la imagen */
-  border-radius: 18px; /* Bordes redondeados opcionales */
-  object-fit: cover; /* Asegura que la imagen cubra el área asignada */
+  width: 595px; 
+  height: 416px; 
+  border-radius: 18px; 
+  object-fit: cover; 
 }
 
 /* Texto en la sección "descubre" */

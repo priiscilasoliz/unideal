@@ -22,7 +22,6 @@ signInBtn.addEventListener('click', () => {
   }
 });
 
-// Opcional: resetear clase mobile cuando cambia el tamaño de ventana
 window.addEventListener('resize', () => {
   if (!isMobile()) {
     containers.classList.remove('sign-up-active');

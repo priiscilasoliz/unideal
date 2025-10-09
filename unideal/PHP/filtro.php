@@ -1,8 +1,7 @@
 <?php
-// Datos de conexión (XAMPP local)
 $host = "localhost";
 $user = "root";
-$password = ""; // por defecto en XAMPP está vacío
+$password = "";
 $dbname = "unideal";
 
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -11,12 +10,10 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-// Variables del formulario
 $provincia = isset($_GET['provincia']) ? $_GET['provincia'] : '';
 $localidad = isset($_GET['localidad']) ? $_GET['localidad'] : '';
 $tipo = isset($_GET['tipo']) ? $_GET['tipo'] : '';
 
-// Construcción dinámica de la consulta
 $query = "SELECT u.Acronimo
           FROM universidades u
           INNER JOIN localidades l ON u.ID_Localidad = l.ID_Localidad
@@ -35,7 +32,6 @@ if (!empty($tipo)) {
 
 $result = $conn->query($query);
 
-// 🔹 Mapa manual de acrónimos → páginas locales
 $links = [
     "UNLAM"  => "../HTML/unlam.html",
     "UTN"    => "../HTML/utn.html",
@@ -52,7 +48,6 @@ if ($result && $result->num_rows > 0) {
     $acronimo = $row['Acronimo'];
 
     if (isset($links[$acronimo])) {
-        // 🔹 Redirige directo a la página definida en el mapa
         header("Location: " . $links[$acronimo]);
         exit();
     } else {

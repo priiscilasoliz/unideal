@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const div = document.createElement("div");
       div.classList.add("sugerencia-item");
 
-      // Mostrar carrera o universidad
       if (item.tipo === "carrera") {
         div.textContent = `${item.nombre} (${item.acronimo})`;
       } else {
