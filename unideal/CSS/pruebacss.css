@@ -1,0 +1,275 @@
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    /* Usamos el color primario de Bootstrap para simular el degradado */
+    background: linear-gradient(to bottom, #D0E6F8, #ffffff); 
+}
+
+/* Header/Navbar: Las reglas de display: flex y justifiy-content están manejadas por navbar de Bootstrap */
+header {
+    background-color: transparent !important; /* Asegura la transparencia */
+}
+.navbar-brand img{
+    height: 100px; /* Reduje el tamaño del logo para un navbar moderno */
+}
+
+/* Colores personalizados usando variables de Bootstrap si fuese necesario, pero manteniendo las clases originales */
+.text-primary { color: #4A90E2 !important; }
+.bg-primary { background-color: #4A90E2 !important; }
+
+/* Botones genéricos */
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+}
+
+/* Botón "Registrarse" */
+.btn-registrar {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-registrar:hover {
+    background-color: #0056b3;
+}
+
+/* Navegación - Ajustes mínimos, la mayoría es Bootstrap */
+.nav-link {
+    color: #333 !important;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #007bff !important;
+}
+
+/* Íconos y botón - Mantener el estilo de espaciado */
+.nave img {
+    height: 20px;
+}
+
+/* Estilos para el buscador (si los scripts JS dependen de ellos) */
+.buscador-wrapper {
+    position: absolute;
+    top: 100%; /* Ajuste para que caiga debajo del icono */
+    right: 0; 
+    width: 300px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+.oculto {
+    display: none !important;
+}
+.autocomplete-box {
+    /* Mantener estilos de JS */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 6px;
+    z-index: 999;
+}
+.sugerencia-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.sugerencia-item:hover {
+    background-color: #f0f0f0;
+}
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+
+/* SECCIÓN HERO (ESTUDIANTE) */
+.estudiante {
+    /* Flexbox handled by Bootstrap row and col classes */
+    max-width: 1200px;
+    margin: 30px auto;
+}
+.estudiante h1 {
+    font-size: 3.5rem; /* Ajuste a rem para mejor responsividad */
+    color: #4A90E2;
+}
+.estudiante p {
+    font-size: 1.125rem;
+    color: #1B3A57;
+}
+
+/* Botones específicos del Hero */
+.btn-azul {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+}
+.btn-azul:hover {
+    background-color: #0056b3;
+}
+.btn-blanco {
+    background-color: white;
+    color: #4A90E2;
+    border: 2px solid #4A90E2; /* Añadí borde para contraste */
+}
+.btn-blanco:hover {
+    background-color: #4A90E2;
+    color: white;
+}
+/* Imagen - handled by img-fluid */
+
+/* SECCIÓN FILTROS */
+.filtros {
+    /* Flexbox and width handled by Bootstrap row, col and container classes */
+    background-color: #D9D9D9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.filtro {
+    /* Display: flex handled by d-flex */
+    background-color: #fff;
+    color: #1B3A57;
+}
+/* Estilo del select nativo */
+.filtro select {
+    /* Removido appearance: none y estilos complejos ya que form-select de Bootstrap es mejor */
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Botón buscar: usa btn-primary de Bootstrap */
+
+
+/* SECCIÓN DESCUBRE */
+.descubre {
+    /* Handled by row, col and container classes */
+    max-width: 1200px;
+}
+.descubre .descubre-img img {
+    /* Mantenemos el estilo de la imagen si es necesario */
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+}
+.descubre .texto h1 {
+    font-size: 2.5rem;
+    color: #4A90E2;
+}
+/* Estadísticas */
+.estadisticas {
+    /* Handled by d-flex and justify-content-between */
+}
+.estadistica h2 {
+    color: #1B3A57;
+}
+
+
+/* SECCIÓN UNIVERSIDADES DESTACADAS */
+.universidades-destacadas h2{
+    color: #4A90E2;
+}
+.card-img-top {
+    object-fit: cover;
+}
+/* Botón de la tarjeta (Ver más) */
+.btn-outline-primary {
+    /* Estilo Bootstrap con color primario */
+    --bs-btn-color: #4A90E2;
+    --bs-btn-border-color: #4A90E2;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #4A90E2;
+    --bs-btn-hover-border-color: #4A90E2;
+}
+
+/* SECCIÓN FAQ (Acordeón de Bootstrap) */
+.faq h2 {
+    color: #4A90E2;
+}
+/* Ajustes para el acordeón de Bootstrap */
+.accordion-button:not(.collapsed) {
+    color: #4A90E2;
+    background-color: #D0E6F8;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+.accordion-button:focus {
+    border-color: #D0E6F8;
+    box-shadow: 0 0 0 .25rem rgba(74, 144, 226, .25);
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #4A9FE3 !important;
+}
+.footer-logo img {
+    /* Estilo para que el logo sea blanco en el footer */
+    filter: brightness(0) invert(1);
+    width: 180px;
+}
+.footer-section h4 {
+    font-size: 1.4rem;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+
+/* MEDIA QUERIES (Simplificados gracias a Bootstrap) */
+@media (max-width: 768px) {
+    .estudiante h1 {
+        font-size: 2.5rem !important;
+    }
+    .descubre .texto h1 {
+        font-size: 2rem !important;
+        text-align: center;
+    }
+    .estadisticas {
+        justify-content: space-around !important;
+        flex-wrap: wrap;
+    }
+    .estadistica {
+        margin-bottom: 1rem;
+    }
+    .filtros {
+        /* Fuerza la columna en dispositivos pequeños si no es el comportamiento por defecto */
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filtro {
+        width: 100%;
+    }
+    .btn-buscar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 70px;
+    }
+}
