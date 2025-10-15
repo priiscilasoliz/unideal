@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades Zona Oeste</title>
+    <link rel="stylesheet" href="CSS/prueba3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">
+        <img src="imagenes/logo.png" alt="logo">
+    </a>
+    
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    
+    <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="HTML/universidades.html">Universidades</a>
+        <a href="HTML/testintereses.html">Test de Intereses</a>
+        <a href="HTML/contacto.html">Contacto</a>
+    </nav>
+    <div class="nave">
+        <div class="buscador-area">
+            <img src="imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+            <div id="buscador-container" class="buscador-wrapper oculto">
+                <div class="input-wrapper">
+                    <input type="text" id="buscador" placeholder="Buscar..." autocomplete="off">
+                    <div id="sombra" class="input-shadow"></div>
+                </div>
+                <div id="sugerencias" class="autocomplete-box"></div>
+            </div>
+        </div>
+
+        <a href="#"><img src="imagenes/user.png" alt="Usuario"></a>
+        <a href="HTML/login_register.html" class="btn-registrar">Registrarse</a>
+    </div>
+</header>
+<main>
+    <section class="estudiante">
+        <div class="texto">
+            <h1>¡Bienvenido a UZO!</h1>
+            <p>Con nuestros test de orientación vocacional y herramientas de asesoramiento personalizadas, queremos que tomes decisiones informadas sobre tu futuro. Hacemos la búsqueda de tu universidad ideal más fácil ;)</p>
+            <button class="btn btn-azul" onclick="location.href='HTML/register.html';">Registrarte</button>
+            <button class="btn btn-blanco" onclick="location.href='HTML/login.html';">Iniciar sesión</button>
+        </div>
+        <div class="imagen">
+            <img src="imagenes/estudiante.png" alt="Estudiante leyendo un libro">
+        </div>
+    </section>
+    <form method="get" action="PHP/filtro.php">
+        <section class="filtros">
+            <div class="filtro">
+                <label for="provincia">Provincia</label>
+                <select id="provincia" name="provincia">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="1">Buenos Aires</option>
+                </select>
+                <img src="imagenes/ubi.png" alt="logo">
+            </div>
+            <div class="filtro">
+                <label for="localidad">Localidad</label>
+                <select id="localidad" name="localidad">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="1">San Justo</option>
+                    <option value="2">Haedo</option>
+                    <option value="3">Hurlingham</option>
+                    <option value="4">Merlo</option>
+                    <option value="5">Tres de Febrero</option>
+                    <option value="6">Moreno</option>
+                    <option value="7">Moron</option>
+                    <option value="8">González Catán</option>
+                </select>
+                <img src="imagenes/home.png" alt="logo">
+            </div>
+            <div class="filtro">
+                <label for="tipo">Tipo</label>
+                <select id="tipo" name="tipo">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="Pública">Pública</option>
+                    <option value="Privada">Privada</option>
+                </select>
+                <img src="imagenes/signopeso.png" alt="logo">
+            </div>
+
+            <button type="submit" class="btn-buscar">Buscar</button>
+        </section>
+    </form>
+    <section class="descubre">
+        <div class="descubre-img">
+            <img src="imagenes/uni0.png" alt="Foto de universidad">
+        </div>
+        <div class="texto">
+            <h1>Descubre tu próxima aventura académica</h1>
+            <p>Descubre más de 30 universidades y programas académicos en la Zona Oeste. Aquí, encontrarás información detallada de cada carrera, incluyendo requisitos de ingreso, duración, costos y más!</p>
+            <div class="estadisticas">
+                <div class="estadistica">
+                    <h2>30+</h2>
+                    <p>Universidades</p>
+                </div>
+                <div class="estadistica">
+                    <h2>200+</h2>
+                    <p>Carreras</p>
+                </div>
+                <div class="estadistica">
+                    <h2>100k+</h2>
+                    <p>Egresados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="universidades-destacadas">
+        <h2>Universidades Destacadas</h2>
+
+        <div class="universidades-container">
+
+            <div class="universidad">
+                <img src="imagenes/unlam.png" alt="Universidad Nacional de La Matanza">
+                <h3>Universidad Nacional de La Matanza (UNLAM)</h3>
+                <p>San Justo, Buenos Aires.</p>
+                <a href="HTML/unlam.html" class="boton">Ver más</a>
+            </div>
+
+            <div class="universidad">
+                <img src="imagenes/utn.png" alt="Universidad Tecnológica Nacional">
+                <h3>Universidad Tecnológica Nacional (UTN)</h3>
+                <p>Haedo, Buenos Aires.</p>
+                <a href="HTML/utn.html" class="boton">Ver más</a>
+            </div>
+
+            <div class="universidad">
+                <img src="imagenes/hurlim.png" alt="Universidad Nacional de Hurlingham">
+                <h3>Universidad Nacional de Hurlingham (UNAHUR)</h3>
+                <p>Hurlingham, Buenos Aires.</p>
+                <a href="HTML/unahur.html" class="boton">Ver más</a>
+            </div>
+
+            <div class="universidad">
+                <img src="imagenes/uno.png" alt="Universidad Nacional del Oeste">
+                <h3>Universidad Nacional del Oeste (UNO)</h3>
+                <p>Merlo, Buenos Aires.</p>
+                <a href="HTML/uno.html" class="boton">Ver más</a>
+            </div>
+
+            <div class="universidad">
+                <img src="imagenes/tresdefebrero.png" alt="Universidad Nacional de Tres de Febrero">
+                <h3>Universidad Nacional de Tres de Febrero (UNTREF)</h3>
+                <p>Tres de Febrero, Buenos Aires.</p>
+                <a href="HTML/untref.html" class="boton">Ver más</a>
+            </div>
+
+            <div class="universidad">
+                <img src="imagenes/moreno.png" alt="Universidad Nacional de Moreno">
+                <h3>Universidad Nacional de Moreno (UNM)</h3>
+                <p>Moreno, Buenos Aires.</p>
+                <a href="HTML/unm.html" class="boton">Ver más</a>
+            </div>
+
+            <div class="universidad">
+                <img src="imagenes/UniMoron.png" alt="Universidad Nacional de Moron">
+                <h3>Universidad Nacional de Moron (UNM)</h3>
+                <p>Moron, Buenos Aires.</p>
+                <a href="HTML/moron.html" class="boton">Ver más</a>
+            </div>
+
+            <div class="universidad">
+                <img src="imagenes/cudi.png" alt="Centro Universitario de La Matanza">
+                <h3>Centro universitario de La Matanza (CUDI)</h3>
+                <p>González Catán, Buenos Aires.</p>
+                <a href="https://www.cudi.ar/" class="boton">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1">¿Qué es UZO?</label>
+            <div class="faq-content">
+                <p>UZO es una plataforma de orientación vocacional que te ayuda a descubrir qué carrera estudiar y en qué universidad hacerlo. Ofrecemos test vocacionales, información sobre universidades y herramientas para comparar opciones según tus intereses y ubicación.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq2">
+            <label for="faq2">¿Cómo funciona el test de intereses?</label>
+            <div class="faq-content">
+                <p>El test consiste en una serie de preguntas diseñadas para identificar tus intereses, habilidades y preferencias. Al finalizar, recibirás resultados personalizados con carreras y universidades que se ajustan a tu perfil.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq3">
+            <label for="faq3">¿Tengo que registrarme para usar UZO?</label>
+            <div class="faq-content">
+                <p>Podés explorar información básica sin registrarte, pero para acceder al test de intereses, guardar resultados o crear tu lista de universidades favoritas, necesitás crear una cuenta gratuita.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq4">
+            <label for="faq4">¿UZO tiene costo?</label>
+            <div class="faq-content">
+                <p>No. UZO es totalmente gratuito para los estudiantes. Nuestro objetivo es acompañarte en tu elección vocacional sin costos ni compromisos.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq5">
+            <label for="faq5">¿Puedo contactar con una universidad desde la página?</label>
+            <div class="faq-content">
+                <p>Sí. En cada ficha de universidad vas a encontrar los numeros y emails de contacto para comunicarte directamente con la institución que te interese.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <a href="#">
+                        <img src="imagenes/logo.png" alt="UZO Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>UZO</h4>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="HTML/testintereses.html">Test de Intereses</a></li>
+                    <li><a href="HTML/universidades.html">Listado de Universidades</a></li>
+                    <li><a href="#">Guías y Consejos</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>uzo.official@gmail.com</li>
+                    <li>Zona Oeste, Buenos Aires.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 UZO - Todos los derechos reservados.</p>
+            <p>Tu buscador de universidades y carreras de Zona Oeste.</p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lógica para el Menú de Hamburguesa (Navbar)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        // Se movió la lógica del buscador para que funcione sin jQuery
+        const searchIcon = document.getElementById('icono-busqueda');
+        const searchContainer = document.getElementById('buscador-container');
+
+        // Toggle del menú
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));
+            // Ocultar el buscador si se abre el menú
+            if (mainNav.classList.contains('active') && !searchContainer.classList.contains('oculto')) {
+                searchContainer.classList.add('oculto');
+            }
+        });
+
+        // Lógica para el Toggle del Buscador (Adaptada de toggle-buscador.js)
+        searchIcon.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evita que el evento se propague al documento
+            
+            // Ocultar el menú si se abre el buscador
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+            
+            searchContainer.classList.toggle('oculto');
+        });
+
+        // Ocultar el buscador al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            if (!searchContainer.contains(e.target) && e.target !== searchIcon) {
+                searchContainer.classList.add('oculto');
+            }
+        });
+        
+        // Asumiendo que tenías lógica en buscador.js que necesita ser adaptada o que no está incluida
+        // Si necesitas adaptar lógica compleja de buscador.js sin jQuery, debe hacerse aquí.
+
+    });
+</script>
+</body>
+</html>
