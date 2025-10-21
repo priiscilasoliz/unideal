@@ -181,9 +181,6 @@ header {
     color: #4A90E2;
 }
 /* Estadísticas */
-.estadisticas {
-    /* Handled by d-flex and justify-content-between */
-}
 .estadistica h2 {
     color: #1B3A57;
 }
@@ -207,18 +204,77 @@ header {
 }
 
 /* SECCIÓN FAQ (Acordeón de Bootstrap) */
+/* Sección de Preguntas Frecuentes */
+.faq {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .faq h2 {
-    color: #4A90E2;
+  text-align: center;
+  color: #4A90E2;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
-/* Ajustes para el acordeón de Bootstrap */
-.accordion-button:not(.collapsed) {
-    color: #4A90E2;
-    background-color: #D0E6F8;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+
+/* Contenedor de cada pregunta */
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
 }
-.accordion-button:focus {
-    border-color: #D0E6F8;
-    box-shadow: 0 0 0 .25rem rgba(74, 144, 226, .25);
+
+/* Oculta los checkbox */
+.faq-item input {
+  display: none;
+}
+
+/* Título de cada pregunta */
+.faq-item label {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.faq-item label:hover {
+  color: #4A90E2;
+}
+
+/* Flechita al lado derecho */
+.faq-item label::after {
+  content: '➕';
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Contenido de la respuesta */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.faq-content p {
+  margin: 10px 0 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Cuando se abre la pregunta */
+.faq-item input:checked + label::after {
+  content: '➖';
+}
+
+.faq-item input:checked ~ .faq-content {
+  max-height: 200px; /* altura expandida */
 }
 
 
