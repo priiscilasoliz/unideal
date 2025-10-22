@@ -77,6 +77,15 @@ nav a:hover {
   height: 20px; /* Tamaño de los íconos */
 }
 
+a {
+    color: inherit; /* Usa el color del texto normal */
+    text-decoration: none; /* Quita el subrayado */
+  }
+
+  a:hover {
+    text-decoration: underline; /* (opcional) subraya al pasar el mouse */
+  }
+  
 /*pie*/
 .footer {
   background-color: #4A9FE3;

@@ -14,10 +14,10 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
+    <nav class="navbar navbar-expand-lg py-0">
         <div class="container-fluid px-lg-5">
             <a href="index.html" class="navbar-brand py-0">
-                <img src="imagenes/logo.png" alt="logo" style="height: 100px;">
+                <img src="imagenes/logo.png" alt="logo" style="height: 200px;">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
                         </div>
 
                         <a href="#"><img src="imagenes/user.png" alt="Usuario" style="height: 20px;"></a>
-                        <a href="HTML/login_register.html" class="btn btn-primary btn-sm fw-bold">Registrarse</a>
+                        <a href="HTML/login_register.html" class="btn btn-azul btn-sm fw-bold">Registrarse</a>
                     </div>
                 </div>
             </div>
@@ -52,11 +52,11 @@
 <main class="container-fluid">
     <section class="row estudiante justify-content-center align-items-center py-5 my-3">
         <div class="col-lg-6 col-md-10 text-center text-lg-start mb-4 mb-lg-0">
-            <div class="texto px-lg-5">
+            <div class="texto">
                 <h1 class="display-3 fw-bold text-primary mb-3">¡Bienvenido a UZO!</h1>
                 <p class="lead text-dark fw-bold mb-4">Con nuestros test de orientación vocacional y herramientas de asesoramiento personalizadas, queremos que tomes decisiones informadas sobre tu futuro. Hacemos la búsqueda de tu universidad ideal más fácil ;)</p>
-                <button class="btn btn-azul btn-lg me-2 mb-2 mb-md-0" onclick="location.href='HTML/register.html';">Registrarte</button>
-                <button class="btn btn-blanco btn-lg" onclick="location.href='HTML/login.html';">Iniciar sesión</button>
+                <button class="btn btn-azul" onclick="location.href='HTML/register.html';">Registrarte</button>
+                <button class="btn btn-blanco" onclick="location.href='HTML/login.html';">Iniciar sesión</button>
             </div>
         </div>
         <div class="col-lg-6 col-md-10 d-flex justify-content-center">
@@ -65,7 +65,7 @@
     </section>
     
     <form method="get" action="PHP/filtro.php" class="container">
-        <section class="filtros row justify-content-center mx-auto bg-light p-4 rounded-3 shadow-sm my-5">
+        <section class="filtros row justify-content-center mx-auto bg-grey p-4 rounded-3 shadow-sm my-5">
             
             <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
                 <div class="filtro d-flex align-items-center bg-white p-2 rounded-2 border">
@@ -115,7 +115,7 @@
             </div>
 
             <div class="col-lg-2 col-md-6 d-grid">
-                <button type="submit" class="btn btn-primary fw-bold">Buscar</button>
+                <button type="submit" class="btn-boton-filtro btn-azul fw-bold">Buscar</button>
             </div>
         </section>
     </form>
@@ -127,7 +127,7 @@
         <div class="col-lg-6 col-md-10">
             <div class="texto">
                 <h1 class="display-5 fw-bold text-primary mb-3">Descubre tu próxima aventura académica</h1>
-                <p class="lead text-secondary mb-4">Descubre más de 30 universidades y programas académicos en la Zona Oeste. Aquí, encontrarás información detallada de cada carrera, incluyendo requisitos de ingreso, duración, costos y más!</p>
+                <p class="lead text-secondary fw-bold text-dark mb-4">Descubre más de 30 universidades y programas académicos en la Zona Oeste. Aquí, encontrarás información detallada de cada carrera, incluyendo requisitos de ingreso, duración, costos y más!</p>
                 
                 <div class="estadisticas d-flex justify-content-between align-items-center mt-4">
                     <div class="estadistica text-center">
@@ -148,7 +148,7 @@
     </section>
     
     <section class="universidades-destacadas container py-5">
-        <h2 class="display-4 fw-bold text-primary mb-5">Universidades Destacadas</h2>
+        <h2 class="text-center display-4 fw-bold text-primary mb-5">Universidades Destacadas</h2>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
             
@@ -235,7 +235,7 @@
                     <div class="card-body text-center">
                         <h3 class="card-title fs-5 fw-bold text-primary">Centro universitario de La Matanza (CUDI)</h3>
                         <p class="card-text text-secondary mb-3">González Catán, Buenos Aires.</p>
-                        <a href="https://www.cudi.ar/" class="btn btn-outline-primary btn-sm fw-bold">Ver más</a>
+                        <a href="HTML/cudi.html" class="btn btn-outline-primary btn-sm fw-bold">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -245,85 +245,55 @@
     
     <section class="faq container py-5">
         <h2 class="text-center display-4 fw-bold text-primary mb-5">Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1">¿Qué es UZO?</label>
+            <div class="faq-content">
+            <p>UZO es una plataforma de orientación vocacional que te ayuda a descubrir qué carrera estudiar y en qué universidad hacerlo. Ofrecemos test vocacionales, información sobre universidades y herramientas para comparar opciones según tus intereses y ubicación.</p>
+            </div>
+        </div>
 
-        <div class="accordion mx-auto" id="faqAccordion" style="max-width: 900px;">
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        ¿Qué es UZO?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        UZO es una plataforma de orientación vocacional que te ayuda a descubrir qué carrera estudiar y en qué universidad hacerlo. Ofrecemos test vocacionales, información sobre universidades y herramientas para comparar opciones según tus intereses y ubicación.
-                    </div>
-                </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq2">
+            <label for="faq2">¿Cómo funciona el test de intereses?</label>
+            <div class="faq-content">
+            <p>El test consiste en una serie de preguntas diseñadas para identificar tus intereses, habilidades y preferencias. Al finalizar, recibirás resultados personalizados con carreras y universidades que se ajustan a tu perfil.</p>
             </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ¿Cómo funciona el test de intereses?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        El test consiste en una serie de preguntas diseñadas para identificar tus intereses, habilidades y preferencias. Al finalizar, recibirás resultados personalizados con carreras y universidades que se ajustan a tu perfil.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ¿Tengo que registrarme para usar UZO?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Podés explorar información básica sin registrarte, pero para acceder al test de intereses, guardar resultados o crear tu lista de universidades favoritas, necesitás crear una cuenta gratuita.
-                    </div>
-                </div>
-            </div>
+        </div>
 
-             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        ¿UZO tiene costo?
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                         No. UZO es totalmente gratuito para los estudiantes. Nuestro objetivo es acompañarte en tu elección vocacional sin costos ni compromisos.
-                    </div>
-                </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq3">
+            <label for="faq3">¿Tengo que registrarme para usar UZO?</label>
+            <div class="faq-content">
+            <p>Podés explorar información básica sin registrarte, pero para acceder al test de intereses, guardar resultados o crear tu lista de universidades favoritas, necesitás crear una cuenta gratuita.</p>
             </div>
+        </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        ¿Puedo contactar con una universidad desde la página?
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                         Sí. En cada ficha de universidad vas a encontrar los numeros y emails de contacto para comunicarte directamente con la institución que te interese.
-                    </div>
-                </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq4">
+            <label for="faq4">¿UZO tiene costo?</label>
+            <div class="faq-content">
+            <p>No. UZO es totalmente gratuito para los estudiantes. Nuestro objetivo es acompañarte en tu elección vocacional sin costos ni compromisos.</p>
             </div>
-            
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq5">
+            <label for="faq5">¿Puedo contactar con una universidad desde la página?</label>
+            <div class="faq-content">
+            <p>Sí. En cada ficha de universidad vas a encontrar los numeros y emails de contacto para comunicarte directamente con la institución que te interese.</p>
+            </div>
         </div>
     </section>
 
 </main>
-<footer class="footer bg-primary text-white mt-5">
+<footer class="footer bg-primary text-white mt-5 ">
     <div class="container py-4">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 footer-content">
             
-            <div class="col footer-section">
+            <div class="col footer-section +">
                 <div class="footer-logo">
-                    <a href="#"><img src="imagenes/logo.png" alt="UZO Logo" class="img-fluid" style="filter: brightness(0) invert(1);"></a>
+                    <a href="#"><img src="imagenes/logo.png" alt="UZO Logo" class="img-fluid"></a>
                 </div>
             </div>
             
