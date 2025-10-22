@@ -38,9 +38,12 @@
                     <div class="nave d-flex align-items-center gap-3 position-relative">
                         <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
                         
-                        <div id="buscador-container" class="buscador-wrapper position-absolute end-0 top-100 mt-2 p-3 bg-white rounded shadow oculto">
-                            <input type="text" id="buscador" class="form-control" placeholder="Buscar..." autocomplete="off">
-                            <div id="sugerencias" class="autocomplete-box mt-1"></div>
+                        <div id="buscador-container" class="buscador-wrapper oculto">
+                        <div class="input-wrapper">
+                            <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
+                            <div id="sombra" class="input-shadow"></div>
+                        </div>
+                        <div id="sugerencias" class="autocomplete-box"></div>
                         </div>
 
                         <a href="#"><img src="../imagenes/user.png" alt="Usuario" style="height: 20px;"></a>

@@ -134,8 +134,8 @@ nav a:hover {
 
 .buscador-wrapper {
   position: absolute;
-  top: 40px;
-  right: 60px;
+  top: 40px; /* ajustá si querés que baje más */
+  right: 60px; /* empuja hacia la izquierda desde el borde derecho */
   width: 300px;
   z-index: 1000;
   background-color: #fff;
