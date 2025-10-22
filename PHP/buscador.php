@@ -1,12 +1,12 @@
 <?php
-$conexion = new mysqli("localhost", "a0030189_Martin", "MartinPA1126", "a0030189_uzo");
+$conexion = new mysqli("localhost", "root", "", "unideal");
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 
 $q = isset($_GET['q']) ? trim($conexion->real_escape_string($_GET['q'])) : '';
 
-$basePath = "/unideal/unideal/HTML/";
+$basePath = "/unideal/HTML/";
 
 $links = [
     "UNLAM"  => $basePath . "unlam.html",
