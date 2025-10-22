@@ -1,0 +1,899 @@
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #D0E6F8, #e7f5f9);
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: none;
+  }
+  
+.logo img{
+    height: 200px;
+    margin-right: 10px;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+  }
+
+.btn-registrar {
+  background-color: #e24aa8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-registrar:hover {
+  background-color: #0056b3;
+}
+
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;  
+  color: #007bff;             
+}
+
+
+.nave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.nave img {
+  height: 20px;
+}
+
+
+
+#buscador-container {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.buscador-wrapper {
+  position: relative;
+  width: 220px;
+  z-index: 100;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.icono-busqueda {
+  height: 20px;
+  cursor: pointer;
+}
+
+.buscador-wrapper {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 300px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+#buscador {
+  width: 100%;
+  padding: 8px 0px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  box-shadow: none;
+  outline: none;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+#sombra.input-shadow{
+  display: none;
+}
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+.estudiante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+.texto {
+    width: 50%;
+    text-align: left;
+  }
+  
+.texto h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #4A90E2;
+    margin-bottom: 20px;
+  }
+  
+.texto p {
+    font-size: 18px;
+    color:  #1B3A57;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+  }
+
+.btn-azul {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+}
+
+.btn-azul:hover {
+  background-color: #0056b3;
+}
+
+.btn-blanco {
+  background-color: white;
+  color: #4A90E2;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-blanco:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.imagen {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+.imagen img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.filtros {
+  display: flex;
+  align-items: center;
+  background-color: #D9D9D9;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex-grow: 1;
+  gap: 10px;
+  color: #1B3A57;
+  font-weight: bold;
+}
+
+.filtro span {
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-buscar {
+  background-color: #4A90E2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; 
+  font-weight: bold; 
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.btn-buscar:hover {
+  background-color: #0056b3; 
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none; 
+  -webkit-appearance: none; 
+  background-color: transparent; 
+  border: none; 
+  font-size: 14px;
+  color: #333; 
+  width: 100%; 
+  cursor: pointer; 
+}
+
+select::after {
+  content: '▼'; 
+  font-size: 12px;
+  position: absolute;
+  right: 10px; 
+  pointer-events: none; 
+}
+
+.filtro select {
+  padding: 8px;
+  border:transparent;
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+
+.filtro select:focus {
+  outline: none; 
+  border-color: transparent;
+}
+
+.descubre {
+  display: flex; 
+  align-items: center; 
+  gap: 100px; 
+  padding: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; /
+}
+
+.descubre .imagen2 {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+}
+
+.descubre .imagen2 img {
+  width: 595px; 
+  height: 416px; 
+  border-radius: 18px; 
+  object-fit: cover; 
+}
+
+/* Texto en la sección "descubre" */
+.descubre .texto {
+  flex: 2; /* El texto ocupa más espacio que la imagen */
+  max-width: 600px; /* Limita el ancho máximo del texto */
+}
+
+.descubre .texto h2 {
+  font-size: 40px; /* Tamaño del título */
+  color: #4A90E2; /* Color del texto */
+  margin-bottom: 10px; /* Separación inferior */
+}
+
+.descubre .texto p {
+  font-size: 18px; /* Tamaño del párrafo */
+  line-height: 28.8px; /* Altura de línea */
+  color: #333; /* Color del texto */
+}
+
+/* Contenedor principal de las estadísticas */
+.estadisticas {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.estadistica {
+  flex: 1; /* Todas las estadísticas ocupan el mismo ancho */
+  text-align: left; /* Centra el contenido dentro del bloque */
+}
+
+.estadistica h2 {
+  font-size: 48px; /* Tamaño del número */
+  color: #1B3A57; /* Azul oscuro */
+  margin-bottom: 5px; /* Separación con el texto */
+}
+
+.estadistica p {
+  font-size: 18px; /* Tamaño del texto descriptivo */
+  color: #1B3A57; /* Azul oscuro */
+}
+
+@media (max-width: 900px) {
+  .estadisticas {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .estadisticas > div {
+    min-width: 120px;
+    max-width: 160px;
+    flex: 1 1 120px;
+  }
+}
+
+.ofrecemos {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center; /* Centra el texto */
+  gap: 20px; /* Espaciado entre el texto y los recuadros */
+}
+
+.ofrecemos .texto {
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.ofrecemos .texto h1 {
+  font-size: 40px;
+  color: #4A90E2;
+  margin-bottom: 10px;
+}
+
+.ofrecemos .texto p {
+  font-size: 18px;
+  color: #1B3A57;
+  margin-bottom: 45px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2s8.8px;
+}
+
+/* Contenedor principal */
+.recuadros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas flexibles */
+  gap: 20px; /* Espacio entre los recuadros */
+  max-width: 1200px; /* Limita el ancho total */
+  margin: 20px auto; /* Centra horizontalmente */
+  padding: 20px;
+}
+
+.recuadro {
+  background-color: #D0E6F8; /* Fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Centra el contenido */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
+}
+
+.recuadro:hover {
+  transform: translateY(-5px); /* Elevación en hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.recuadros-centrados {
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 20px; /* Espacio entre los recuadros */
+  margin-top: 10px; /* Espacio adicional arriba */
+}
+
+/* Iconos */
+.recuadro img {
+  height: 50px; /* Tamaño del ícono */
+  margin-bottom: 10px; /* Separación con el título */
+}
+
+/* Títulos */
+.recuadro h3 {
+  font-size: 18px;
+  color: #1a3b5d; /* Azul más oscuro */
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.recuadro p {
+  font-size: 14px;
+  color: #333; /* Gris oscuro */
+  line-height: 1.5;
+}
+
+.universidades-destacadas {
+  text-align: center;
+  padding: 20px;
+}
+
+.universidades-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.universidad {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  padding-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.universidad img {
+  max-width: 100%;
+  width: 100%;
+  height: 250px;
+  display: block;
+  border-radius: 8px 8px 0px 0px;
+  padding-bottom: 7px;
+  margin: 0 auto;
+}
+
+.universidad h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #4A90E2;
+  margin: 10px 0px;
+}
+
+.universidad p {
+  font-size: 14px;
+  color: #555;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4A9FE3; /* Azul */
+  color: #ffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Asegura que el padding y border no desborden el ancho */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*pie*/
+.footer {
+  background-color: #4A9FE3;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #dceeff;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+/* --- Responsive para móviles y tablets --- */
+@media (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+  h1, h2, h3 {
+    font-size: 1.1em;
+    margin: 8px 0;
+  }
+  .universidad {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    padding: 8px;
+    margin: 0 auto 10px auto;
+  }
+  .universidades-container {
+    width: 100%;
+    padding: 0 5px;
+    gap: 10px;
+  }
+  nav a, .boton, .btn, .btn-registrar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 0;
+    font-size: 1em;
+  }
+  section, .ofrecemos, .descubre {
+    padding: 8px 0;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .logo {
+    margin-bottom: 6px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+  .nave {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+  }
+  .logo img {
+    max-width: 100px;
+    height: auto;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  nav a {
+    font-size: 1em;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+  .nave {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .icono-busqueda {
+    height: 18px;
+    width: auto;
+  }
+  .descubre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    gap: 18px;
+  }
+  .descubre .texto {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    padding: 0 8px;
+  }
+  .descubre .descubre-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .descubre-img img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Todos los divs principales */
+  .universidades-container,
+  .universidad,
+  .descubre,
+  .ofrecemos,
+  .recuadros,
+  .recuadros-centrados,
+  .estadisticas,
+  .filtros,
+  .footer {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  /* Ajuste para divs internos */
+  .universidad,
+  .recuadro,
+  .filtro {
+    width: 95%;
+    min-width: unset;
+    max-width: 350px;
+    margin: 0 auto 8px auto;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  /* Imágenes dentro de divs */
+  .universidad img,
+  .descubre .imagen2 img,
+  .recuadro img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .recuadros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 12px;
+    width: 100%;
+    padding: 8px 0;
+    justify-items: center;
+  }
+  @media (max-width: 600px) {
+    .recuadros {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+  }
+  .recuadro {
+    width: 90%;
+    max-width: 180px;
+    min-width: 120px;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  .recuadro img {
+    width: 80px;
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recuadro p,
+  .recuadro h3,
+  .recuadro h4 {
+    font-size: 1em;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .bienvenida, .texto-bienvenida {
+    font-size: 1em;
+    text-align: center;
+    margin: 12px 8px;
+    padding: 0 6px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+}
+@media (max-width: 900px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 0;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    width: auto;
+  }
+  .header-derecha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn-registrar {
+    align-self: flex-end;
+    margin-bottom: 6px;
+    width: auto;
+  }
+  .nave {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/* --- Desktop: íconos al lado del botón --- */
+.header-derecha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.nave {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.btn-registrar {
+  order: 2; /* Registrarse a la derecha */
+}
+.nave {
+  order: 1; /* Íconos a la izquierda */
+}
+
+

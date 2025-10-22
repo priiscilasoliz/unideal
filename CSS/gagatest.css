@@ -1,0 +1,749 @@
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #D0E6F8, #ffffff);
+
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: none;
+  }
+  
+.logo img{
+    height: 200px;
+    margin-right: 10px;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+  }
+
+.btn-registrar {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-registrar:hover {
+  background-color: #0056b3;
+}
+
+/* Navegación */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;  /* Subraya el texto */
+  color: #007bff;             /* Puedes cambiar el color del texto al hacer hover */
+}
+
+/* Íconos y botón */
+.nave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.nave img {
+  height: 20px; /* Tamaño de los íconos */
+}
+
+#buscador-container {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.buscador-wrapper {
+  position: relative;
+  width: 220px;
+  z-index: 100;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.icono-busqueda {
+  height: 20px;
+  cursor: pointer;
+}
+
+.buscador-wrapper {
+  position: absolute;
+  top: 40px; /* ajustá si querés que baje más */
+  right: 60px; /* empuja hacia la izquierda desde el borde derecho */
+  width: 300px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+#buscador {
+  width: 100%;
+  padding: 8px 0px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  box-shadow: none;
+  outline: none;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+#sombra.input-shadow{
+  display: none;
+}
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+.estudiante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 30px auto;
+  }
+  
+.texto {
+    width: 50%;
+    text-align: left;
+  }
+  
+.texto h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #4A90E2;
+    margin-bottom: 20px;
+  }
+  
+.texto p {
+    font-size: 18px;
+    color:  #1B3A57;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+.btn {
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+  }
+
+.btn-azul {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+}
+
+.btn-azul:hover {
+  background-color: #0056b3;
+}
+
+.btn-blanco {
+  background-color: white;
+  color: #4A90E2;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-blanco:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.imagen {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+.imagen img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Fondo gris del contenedor principal */
+.filtros {
+  display: flex; /* Organización horizontal */
+  align-items: center; /* Centrar elementos verticalmente */
+  background-color: #D9D9D9; /* Fondo gris */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  gap: 15px; /* Separación entre los filtros */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 40px auto;
+}
+
+/* Cada cuadro de filtro */
+.filtro {
+  display: flex; /* Ícono y texto en línea */
+  align-items: center; /* Centrado vertical */
+  background-color: #fff; /* Fondo blanco */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ddd; /* Bordes ligeros */
+  flex-grow: 1; /* Ocupa el mismo espacio cada cuadro */
+  gap: 10px; /* Espacio entre ícono y texto */
+  color: #1B3A57;
+  font-weight: bold;
+}
+
+/* Texto dentro de los filtros */
+.filtro span {
+  font-size: 14px;
+  color: #333; /* Color del texto */
+}
+
+/* Botón azul de buscar */
+.btn-buscar {
+  background-color: #4A90E2; /* Azul principal */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin bordes */
+  border-radius: 8px; /* Bordes redondeados */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer; /* Cursor de mano */
+  transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.btn-buscar:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+select {
+  appearance: none; /* Elimina el estilo nativo */
+  -moz-appearance: none; /* Para Firefox */
+  -webkit-appearance: none; /* Para Chrome/Safari */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  font-size: 14px; /* Tamaño de texto */
+  color: #333; /* Color del texto */
+  width: 100%; /* Ajusta al ancho del contenedor */
+  cursor: pointer; /* Cursor de mano */
+}
+
+/* Añadir un ícono indicador (flecha) */
+select::after {
+  content: '▼'; /* Símbolo de flecha */
+  font-size: 12px;
+  position: absolute;
+  right: 10px; /* Alineación derecha */
+  pointer-events: none; /* No afecta el clic */
+}
+
+/* Estilo del contenedor del select */
+.filtro select {
+  padding: 8px; /* Espaciado interno */
+  border:transparent;
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center;
+  
+}
+
+/* Añade interactividad */
+.filtro select:focus {
+  outline: none; /* Sin borde de enfoque */
+  border-color: transparent;
+}
+
+.descubre {
+  display: flex; /* Organiza los elementos en línea horizontal */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 100px; /* Espacio entre la imagen y el texto */
+  padding: 20px; /* Espaciado interno */
+  max-width: 1200px; /* Limita el ancho máximo de la sección */
+  margin: 30px auto;
+  margin-top:45px;
+}
+
+/* Imagen en la sección "descubre" */
+.descubre .descubre-img {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.descubre .descubre-img img {
+  width: 595px; /* La imagen ocupa el 100% del contenedor de la imagen */
+  height: 416px; /* Mantiene la proporción de la imagen */
+  border-radius: 18px; /* Bordes redondeados opcionales */
+  object-fit: cover; /* Asegura que la imagen cubra el área asignada */
+}
+
+/* Texto en la sección "descubre" */
+.descubre .texto {
+  flex: 2; /* El texto ocupa más espacio que la imagen */
+  max-width: 600px; /* Limita el ancho máximo del texto */
+}
+
+.descubre .texto h1 {
+  font-size: 40px; /* Tamaño del título */
+  color: #4A90E2; /* Color del texto */
+  margin-bottom: 10px; /* Separación inferior */
+}
+
+.descubre .texto p {
+  font-size: 18px; /* Tamaño del párrafo */
+  line-height: 28.8px; /* Altura de línea */
+  color: #333; /* Color del texto */
+}
+
+/* Contenedor principal de las estadísticas */
+.estadisticas {
+  display: flex;
+  justify-content: center;/* Espaciado entre las estadísticas */
+  align-items: center; /* Centrado vertical */
+  margin-top: 10px; /* Espacio entre el texto y las estadísticas */
+  gap: 20px; /* Espaciado entre los bloques */
+  max-width: 600px; /* Limita el ancho al del texto */
+  flex-direction: row;
+}
+
+/* Estilo para cada bloque de estadística */
+.estadistica {
+  flex: 1; /* Todas las estadísticas ocupan el mismo ancho */
+  text-align: left; /* Centra el contenido dentro del bloque */
+}
+
+.estadistica h2 {
+  font-size: 48px; /* Tamaño del número */
+  color: #1B3A57; /* Azul oscuro */
+  margin-bottom: 5px; /* Separación con el texto */
+}
+
+.estadistica p {
+  font-size: 18px; /* Tamaño del texto descriptivo */
+  color: #1B3A57; /* Azul oscuro */
+}
+
+.ofrecemos {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center; /* Centra el texto */
+  gap: 20px; /* Espaciado entre el texto y los recuadros */
+}
+
+.ofrecemos .texto {
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.ofrecemos .texto h1 {
+  font-size: 40px;
+  color: #4A90E2;
+  margin-bottom: 10px;
+}
+
+.ofrecemos .texto p {
+  font-size: 18px;
+  color: #1B3A57;
+  margin-bottom: 45px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2s8.8px;
+}
+
+/* Contenedor principal */
+.recuadros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas flexibles */
+  gap: 20px; /* Espacio entre los recuadros */
+  max-width: 1200px; /* Limita el ancho total */
+  margin: 20px auto; /* Centra horizontalmente */
+  padding: 20px;
+}
+
+.recuadro {
+  background-color: #D0E6F8; /* Fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Centra el contenido */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
+}
+
+.recuadro:hover {
+  transform: translateY(-5px); /* Elevación en hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.recuadros-centrados {
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 20px; /* Espacio entre los recuadros */
+  margin-top: 10px; /* Espacio adicional arriba */
+}
+
+/* Iconos */
+.recuadro img {
+  height: 50px; /* Tamaño del ícono */
+  margin-bottom: 10px; /* Separación con el título */
+}
+
+/* Títulos */
+.recuadro h3 {
+  font-size: 18px;
+  color: #1a3b5d; /* Azul más oscuro */
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.recuadro p {
+  font-size: 14px;
+  color: #333; /* Gris oscuro */
+  line-height: 1.5;
+}
+
+.universidades-destacadas {
+  text-align: center;
+  padding: 20px;
+  margin: 30px auto;
+}
+
+.universidades-destacadas h2{
+  color: #4A90E2;
+}
+
+.universidades-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.universidad {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  padding-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.universidad img {
+  width: 100%;
+  max-height: 225px;
+  height: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.universidad h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #4A90E2;
+  margin: 10px 0px;
+}
+
+.universidad p {
+  font-size: 14px;
+  color: #555;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Azul */
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Sección de Preguntas Frecuentes */
+.faq {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.faq h2 {
+  text-align: center;
+  color: #4A90E2;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de cada pregunta */
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+/* Oculta los checkbox */
+.faq-item input {
+  display: none;
+}
+
+/* Título de cada pregunta */
+.faq-item label {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.faq-item label:hover {
+  color: #4A90E2;
+}
+
+/* Flechita al lado derecho */
+.faq-item label::after {
+  content: '➕';
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Contenido de la respuesta */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.faq-content p {
+  margin: 10px 0 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Cuando se abre la pregunta */
+.faq-item input:checked + label::after {
+  content: '➖';
+}
+
+.faq-item input:checked ~ .faq-content {
+  max-height: 200px; /* altura expandida */
+}
+
+
+/*pie*/
+.footer {
+  background-color: #4A9FE3;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  margin-top: 45px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #dceeff;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+      .descubre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    gap: 18px;
+  }
+        .texto{
+    width: 80%;
+    text-align: center;
+    font-size: 1em;
+    padding: 0 8px;
+  } 
+  .descubre-img img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+  }
+  .estadistica{
+     width: 80%;
+  }
+  .estadisticas{
+    width: 80%;
+    max-width: 900px;
+  }
+
+    .recuadro img {
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    max-height: 100px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .recuadros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 12px;
+    width: 100%;
+    padding: 8px 0;
+    justify-items: center;
+  }
+}

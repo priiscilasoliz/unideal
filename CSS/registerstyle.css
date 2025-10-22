@@ -1,0 +1,330 @@
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #D0E6F8, #ffffff);
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: none;
+  }
+  
+.logo img{
+    height: 200px;
+    margin-right: 10px;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+  }
+
+.btn-registrar {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-registrar:hover {
+  background-color: #0056b3;
+}
+
+/* Navegación */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;  /* Subraya el texto */
+  color: #007bff;             /* Puedes cambiar el color del texto al hacer hover */
+}
+
+/* Íconos y botón */
+.nave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.nave img {
+  height: 20px; /* Tamaño de los íconos */
+}
+
+/*pie*/
+.footer {
+  background-color: #4A9FE3;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #dceeff;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+#buscador-container {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.buscador-wrapper {
+  position: relative;
+  width: 220px;
+  z-index: 100;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.icono-busqueda {
+  height: 20px;
+  cursor: pointer;
+}
+
+.buscador-wrapper {
+  position: absolute;
+  top: 40px; /* ajustá si querés que baje más */
+  right: 60px; /* empuja hacia la izquierda desde el borde derecho */
+  width: 300px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+#buscador {
+  width: 100%;
+  padding: 8px 0px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  box-shadow: none;
+  outline: none;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+#sombra.input-shadow{
+  display: none;
+}
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 59vh;
+    gap: 50px; /* Espaciado entre la imagen y el formulario */
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+
+.books-image {
+    width: 400px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    
+}
+
+form {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #236bfe;
+    margin-bottom: 10px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #236bfe;
+}
+
+.form-group img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.register-button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #236bfe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #1b56d2;
+}
+

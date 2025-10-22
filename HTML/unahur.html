@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZO - Orientación Vocacional</title>
+  <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/unlamstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg py-0">
+        <div class="container-fluid px-lg-5">
+            <a href="../index.html" class="navbar-brand py-0">
+                <img src="../imagenes/logo.png" alt="logo" style="height: 200px;">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-3 fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../HTML/universidades.html">Universidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../HTML/testintereses.html">Test de Intereses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../HTML/contacto.html">Contacto</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <div class="nave d-flex align-items-center gap-3 position-relative">
+                        <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+                        
+                        <div id="buscador-container" class="buscador-wrapper position-absolute end-0 top-100 mt-2 p-3 bg-white rounded shadow oculto">
+                            <input type="text" id="buscador" class="form-control" placeholder="Buscar..." autocomplete="off">
+                            <div id="sugerencias" class="autocomplete-box mt-1"></div>
+                        </div>
+
+                        <a href="#"><img src="../imagenes/user.png" alt="Usuario" style="height: 20px;"></a>
+                        <a href="../HTML/login_register.html" class="btn btn-azul btn-sm fw-bold">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+  <main>
+    <div class="container">
+        <h1>Universidad Nacional de Hurlingham (UNAHUR)</h1>
+        <p>
+            Inaugurada en 2015, busca democratizar el acceso a la educación superior en Hurlingham y alrededores. Su lema es ofrecer calidad educativa cercana a la comunidad.
+        </p>
+        <img src="../imagenes/hurlimpt2.png" alt="Campus de la Universidad de Hurlingham" class="fotodeuniversidad">
+        
+        <div class="carreras">
+            <h2>Carreras:</h2>
+             <p>La UNAHUR tiene enfoque está en brindar carreras accesibles y relevantes para el desarrollo de la comunidad local, con énfasis en ciencias aplicadas y educación:</p>
+            <h3>Ciencias de la Salud:</h3>
+            <ul>
+               <li><a href="https://unahur.edu.ar/licenciatura-en-kinesiologia-y-fisiatria/">Licenciatura en Kinesiología y Fisiatría</a></li>
+                <li><a href="https://unahur.edu.ar/licenciatura-en-enfermeria/">Licenciatura en Enfermería</a></li>
+                <li><a href="https://unahur.edu.ar/licenciatura-en-obstetricia/">Licenciatura en Obstretricia</a></li>
+                <li><a href="https://unahur.edu.ar/licenciado-a-en-nutricion/">Licenciatura en Nutrición</a></li>
+            </ul>
+
+            <h3>Ingeniería y Tecnología:</h3>
+            <ul>
+                <li><a href="https://unahur.edu.ar/ingenieria-electrica/">Ingeniería en Energía Eléctrica</a></li>
+                <li><a href="https://unahur.edu.ar/tecnicatura-universitaria-en-energia-electrica/">Tecnicatura Universitaria en Energía Eléctrica</a></li>
+                <li><a href="https://unahur.edu.ar/tecnicatura-universitaria-en-informatica/">Tecnicatura Universitaria en Informática</a></li>
+            </ul>
+
+            <h3>Educación:</h3>
+            <ul>
+                <li><a href="https://unahur.edu.ar/profesorado-universitario-de-educacion-primaria/">Profesorado Universitario de Educación Primaria</a></li>
+                <li><a href="https://unahur.edu.ar/profesorado-universitario-de-educacion-inicial/">Profesorado Universitario de Educación Inicial</a></li>
+            </ul>
+
+            <h3>Ciencia y Tecnología de Alimentos:</h3>
+            <ul>
+                <li><a href="https://unahur.edu.ar/tecnicatura-universitaria-en-laboratorio/">Tecnicatura Universitaria en Laboratorio</a></li>
+            </ul>
+
+
+        <h2>Modalidades Disponibles y Datos de Contacto</h2>
+        <h3>Modalidades de Estudio:</h3>
+        <ul>
+            <li>Presencial, con opciones virtuales en posgrados y educación continua.</li>
+        </ul>
+        <h3>Contacto:</h3>
+        <ul>
+            <li>
+                Página web: www.unahur.edu.ar</li>
+            <li>Dirección: Av. Vergara 2222, Villa Tesei, Buenos Aires</li>
+            <li>Teléfono: (011) 4450-0900</li>
+        </ul>
+    </div>
+    <div class="navegacion">
+        <a href="../index.html" class="boton-siguiente">
+            <img src="../imagenes/ArrowBack.png" alt="Flecha derecha" class="icono">
+        </a>
+      </div>
+    </main>
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+
+      <!-- Logo -->
+      <div class="footer-section">
+        <div class="footer-logo">
+          <a href="../index.html">
+            <img src="../imagenes/logo.png" alt="UZO Logo">
+          </a>
+        </div>
+        
+      </div>
+
+      <!-- Sección UZO -->
+      <div class="footer-section">
+        <h4>UZO</h4>
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Términos de Servicio</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <!-- Recursos -->
+      <div class="footer-section">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="testintereses.html">Test de Intereses</a></li>
+          <li><a href="universidades.html">Listado de Universidades</a></li>
+          <li><a href="#">Guías y Consejos</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p>📧 uzo.official@gmail.com</p>
+        <p>📍 Zona Oeste, Buenos Aires.</p>
+      </div>
+    </div>
+
+    <!-- Derechos reservados -->
+    <div class="footer-bottom">
+      <p>© 2025 UZO - Todos los derechos reservados.</p>
+      <p>Tu buscador de universidades y carreras de Zona Oeste.</p>
+    </div>
+  </div>
+</footer>
+<script src="../JS/toggle-buscador.js"></script>
+<script src="../JS/buscador.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #D0E6F8, #ffffff);
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: none;
+  }
+  
+.logo img{
+    height: 200px;
+    margin-right: 10px;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+  }
+
+.btn-registrar {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-registrar:hover {
+  background-color: #0056b3;
+}
+
+/* Navegación */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;  /* Subraya el texto */
+  color: #007bff;             /* Puedes cambiar el color del texto al hacer hover */
+}
+
+/* Íconos y botón */
+.nave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.nave img {
+  height: 20px; /* Tamaño de los íconos */
+}
+
+#buscador-container {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.buscador-wrapper {
+  position: relative;
+  width: 220px;
+  z-index: 100;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.icono-busqueda {
+  height: 20px;
+  cursor: pointer;
+}
+
+.buscador-wrapper {
+  position: absolute;
+  top: 40px; /* ajustá si querés que baje más */
+  right: 60px; /* empuja hacia la izquierda desde el borde derecho */
+  width: 300px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+#buscador {
+  width: 100%;
+  padding: 8px 0px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  box-shadow: none;
+  outline: none;
+}
+
+.autocomplete-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.sugerencia-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f0f0;
+}
+
+#sombra.input-shadow{
+  display: none;
+}
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+
+.containers {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+              0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  margin: 50px auto; /* Centrado en la pantalla */
+}
+
+.form-containers {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-containers {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-containers {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.containers.right-panel-active .sign-up-containers {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.containers.right-panel-active .sign-in-containers {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  border: none;
+  padding: 12px 45px;
+  background-color: #4A90E2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.overlay-containers {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.containers.right-panel-active .overlay-containers {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: #4A90E2;
+  background: linear-gradient(to right, #4A90E2, #6fb1fc);
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.containers.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.containers.right-panel-active .overlay-left {
+  transform: translateX(-10%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(10%);
+}
+
+.containers.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.ghost {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 12px 45px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ghost:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/*pie*/
+.footer {
+  background-color: #4A9FE3;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #dceeff;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}

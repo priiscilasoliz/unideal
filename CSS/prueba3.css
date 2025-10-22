@@ -1,0 +1,665 @@
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #D0E6F8, #ffffff);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: none;
+    position: relative; /* Para posicionar el menú de hamburguesa */
+}
+
+.logo img {
+    height: 100px; /* Ajuste el tamaño para que sea manejable */
+    margin-right: 10px;
+}
+
+/* Menú de Hamburguesa (Inicialmente oculto) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+}
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    border: none; /* Asegurar que no tenga borde si no se define */
+}
+
+.btn-registrar {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-registrar:hover {
+    background-color: #0056b3;
+}
+
+/* Navegación */
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: text-decoration 0.3s ease;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Íconos y botón */
+.nave {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.nave img {
+    height: 20px;
+}
+
+/* Estilos del buscador */
+.buscador-area {
+    position: relative;
+    /* Necesario para que el contenedor flotante se posicione correctamente */
+}
+
+.buscador-wrapper {
+    position: absolute;
+    top: 40px; /* Ajuste para que caiga debajo del icono */
+    right: 0;
+    width: 300px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+#buscador {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    box-shadow: none;
+    outline: none;
+}
+/* Estilos para sugerencias omitidos por brevedad, pero deben estar aquí. */
+
+/* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
+
+/* SECCIÓN ESTUDIANTE (HERO) */
+.estudiante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.texto {
+    width: 50%;
+    text-align: left;
+}
+
+.texto h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 18px;
+    color: #1B3A57;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.btn-azul {
+    background-color: #4A90E2;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-azul:hover {
+    background-color: #0056b3;
+}
+
+.btn-blanco {
+    background-color: white;
+    color: #4A90E2;
+    border: 2px solid #4A90E2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-blanco:hover {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.imagen {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* SECCIÓN FILTROS */
+.filtros {
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    flex-grow: 1;
+    gap: 10px;
+    color: #1B3A57;
+    font-weight: bold;
+}
+
+.btn-buscar {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buscar:hover {
+    background-color: #0056b3;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* SECCIÓN DESCUBRE */
+.descubre {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 45px auto;
+    width: 90%;
+}
+
+.descubre-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.descubre .descubre-img img {
+    width: 100%;
+    max-width: 595px;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.descubre .texto {
+    flex: 2;
+    max-width: 600px;
+}
+
+.descubre .texto h1 {
+    font-size: 40px;
+    color: #4A90E2;
+    margin-bottom: 10px;
+}
+
+.descubre .texto p {
+    font-size: 18px;
+    line-height: 28.8px;
+    color: #333;
+}
+
+.estadisticas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.estadistica {
+    flex: 1;
+    text-align: left;
+}
+
+.estadistica h2 {
+    font-size: 48px;
+    color: #1B3A57;
+    margin-bottom: 5px;
+}
+
+.estadistica p {
+    font-size: 18px;
+    color: #1B3A57;
+}
+
+/* SECCIÓN UNIVERSIDADES DESTACADAS */
+.universidades-destacadas {
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+    width: 90%;
+}
+
+.universidades-destacadas h2 {
+    color: #4A90E2;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.universidades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 20px;
+}
+
+.universidad {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Para que la imagen respete el borde superior */
+}
+
+.universidad img {
+    width: 100%;
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.universidad h3 {
+    font-size: 18px;
+    margin: 10px 15px 5px;
+    color: #4A90E2;
+}
+
+.universidad p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+/* SECCIÓN FAQ (Acordeón nativo) */
+.faq {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #4A90E2;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.faq-item input {
+    display: none;
+}
+
+.faq-item label {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.faq-item label:hover {
+    color: #4A90E2;
+}
+
+.faq-item label::after {
+    content: '➕';
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.faq-content p {
+    margin: 10px 0 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item input:checked + label::after {
+    content: '➖';
+}
+
+.faq-item input:checked ~ .faq-content {
+    max-height: 200px; /* Altura expandida (suficiente para el contenido) */
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #4A9FE3;
+    color: white;
+    padding: 30px 0;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 45px;
+}
+
+.footer .container {
+    max-width: 1100px;
+    margin: auto;
+    width: 90%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 180px; /* Ancho mínimo para que se apilen bien */
+}
+
+.footer-logo img {
+    width: 180px;
+}
+
+.footer-section h4 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #dceeff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+
+/* ============================================== */
+/* MEDIA QUERIES (RESPONSIVE)            */
+/* ============================================== */
+
+/* TABLET (Max 992px) */
+@media (max-width: 992px) {
+    /* Header */
+    .logo img {
+        height: 80px;
+    }
+    header {
+        padding: 5px 20px;
+    }
+    .main-nav {
+        gap: 15px;
+    }
+    .nave {
+        gap: 20px;
+    }
+    /* Hero */
+    .estudiante {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .texto, .imagen {
+        width: 100%;
+    }
+    .texto {
+        order: 2;
+        padding-top: 20px;
+    }
+    .imagen {
+        order: 1;
+    }
+    .texto h1 {
+        font-size: 48px;
+    }
+    /* Filtros */
+    .filtros {
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 20px auto;
+    }
+    .filtro, .btn-buscar {
+        flex-basis: 48%; /* Dos por fila */
+    }
+    .btn-buscar {
+        flex-basis: 100%; /* Botón de búsqueda ocupa todo el ancho */
+    }
+    /* Descubre */
+    .descubre {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .descubre .texto {
+        max-width: 100%;
+    }
+    .estadisticas {
+        justify-content: space-around;
+        max-width: 100%;
+        margin: 20px auto 0;
+    }
+}
+
+
+/* MÓVIL (Max 768px) */
+@media (max-width: 768px) {
+    /* Header/Menú de Hamburguesa */
+    .main-nav, .nave {
+        display: none; /* Ocultamos la navegación y los íconos por defecto */
+    }
+    .menu-toggle {
+        display: block; /* Mostramos el botón de hamburguesa */
+        order: 3; /* Colocamos al final del header */
+    }
+    .logo {
+        order: 1;
+    }
+    .nave {
+        order: 2; /* Movemos los íconos cerca del logo si es necesario */
+        display: flex; /* Para que el buscador siga funcionando */
+        gap: 15px;
+    }
+    .nave .btn-registrar {
+        display: none; /* Ocultar registrarse para ahorrar espacio */
+    }
+    
+    /* Menú Desplegable */
+    .main-nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px; /* Debajo del logo */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 10;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+    }
+    .main-nav.active a {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+    .main-nav.active a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Buscador */
+    .buscador-wrapper {
+        right: 10px;
+        width: 90vw; /* El 90% del ancho del viewport */
+    }
+    
+    /* Hero */
+    .texto h1 {
+        font-size: 40px;
+    }
+    .btn-azul, .btn-blanco {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Filtros */
+    .filtro {
+        flex-basis: 100%; /* Un filtro por fila */
+    }
+    
+    /* Universidades */
+    .universidades-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Una columna más grande */
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        min-width: 100%;
+    }
+    .footer-section ul {
+        margin-bottom: 20px;
+    }
+}
