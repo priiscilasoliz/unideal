@@ -11,7 +11,7 @@ header {
     background-color: transparent !important; /* Asegura la transparencia */
 }
 .navbar-brand img{
-    height: 100px; /* Reduje el tamaño del logo para un navbar moderno */
+    height: 200px; /* Reduje el tamaño del logo para un navbar moderno */
 }
 
 /* Colores personalizados usando variables de Bootstrap si fuese necesario, pero manteniendo las clases originales */
@@ -27,8 +27,18 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: bold; 
+    height: 44px;
 }
 
+.btn-boton-filtro{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+}
 /* Botón "Registrarse" */
 .btn-registrar {
     background-color: #4A90E2;
@@ -119,7 +129,6 @@ header {
     font-size: 1.125rem;
     color: #1B3A57;
 }
-
 /* Botones específicos del Hero */
 .btn-azul {
     background-color: #4A90E2;
@@ -164,6 +173,7 @@ header {
 /* Botón buscar: usa btn-primary de Bootstrap */
 
 
+
 /* SECCIÓN DESCUBRE */
 .descubre {
     /* Handled by row, col and container classes */
@@ -179,6 +189,9 @@ header {
 .descubre .texto h1 {
     font-size: 2.5rem;
     color: #4A90E2;
+}
+.descubre .texto p{
+    font-weight: 100;
 }
 /* Estadísticas */
 .estadistica h2 {
@@ -203,7 +216,6 @@ header {
     --bs-btn-hover-border-color: #4A90E2;
 }
 
-/* SECCIÓN FAQ (Acordeón de Bootstrap) */
 /* Sección de Preguntas Frecuentes */
 .faq {
   max-width: 900px;
@@ -215,7 +227,6 @@ header {
 .faq h2 {
   text-align: center;
   color: #4A90E2;
-  font-size: 32px;
   margin-bottom: 30px;
 }
 
@@ -230,6 +241,7 @@ header {
 .faq-item input {
   display: none;
 }
+
 
 /* Título de cada pregunta */
 .faq-item label {
@@ -277,14 +289,12 @@ header {
   max-height: 200px; /* altura expandida */
 }
 
-
 /* FOOTER */
 .footer {
     background-color: #4A9FE3 !important;
 }
 .footer-logo img {
     /* Estilo para que el logo sea blanco en el footer */
-    filter: brightness(0) invert(1);
     width: 180px;
 }
 .footer-section h4 {
@@ -321,6 +331,9 @@ header {
     }
     .btn-buscar {
         width: 100%;
+    }
+    .footer-section{
+        align-items: center;
     }
 }
 
