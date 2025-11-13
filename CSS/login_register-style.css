@@ -2,79 +2,70 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background: linear-gradient(to bottom, #D0E6F8, #ffffff);
-  }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 40px;
-    background-color: none;
-  }
-  
-.logo img{
-    height: 200px;
-    margin-right: 10px;
+    background: linear-gradient(to bottom, #D0E6F8, #ffffff); 
 }
 
+header {
+    background-color: transparent !important;
+}
+
+.navbar-brand img{
+    height: 200px;
+}
+
+.text-primary { color: #4A90E2 !important; }
+.bg-primary { background-color: #4A90E2 !important; }
+
 .btn {
-    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: bold; 
-  }
+    height: 44px;
+}
+
+.btn-boton-filtro{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; 
+}
 
 .btn-registrar {
-  background-color: #4A90E2;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  font-weight: bold;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .btn-registrar:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-/* Navegación */
-nav {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center; /* Centra los enlaces horizontalmente */
-  gap: 20px;
+.nav-link {
+    color: #333 !important;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: text-decoration 0.3s ease;
-}
-
-nav a:hover {
-  text-decoration: underline;  /* Subraya el texto */
-  color: #007bff;             /* Puedes cambiar el color del texto al hacer hover */
-}
-
-/* Íconos y botón */
-.nave {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  position: relative;
+.nav-link:hover {
+    text-decoration: underline;
+    color: #007bff !important;
 }
 
 .nave img {
-  height: 20px; /* Tamaño de los íconos */
+    height: 20px;
 }
 
 #buscador-container {
@@ -132,8 +123,8 @@ nav a:hover {
 
 .buscador-wrapper {
   position: absolute;
-  top: 40px; /* ajustá si querés que baje más */
-  right: 60px; /* empuja hacia la izquierda desde el borde derecho */
+  top: 40px;
+  right: 60px;
   width: 300px;
   z-index: 1000;
   background-color: #fff;
@@ -152,51 +143,27 @@ nav a:hover {
   outline: none;
 }
 
-.autocomplete-box {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: none;
-  max-height: 200px;
-  overflow-y: auto;
-  margin-top: 6px;
-  z-index: 999;
-}
-
-.sugerencia-item {
-  padding: 10px;
-  cursor: pointer;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.sugerencia-item:hover {
-  background-color: #f0f0f0;
-}
-
 #sombra.input-shadow{
   display: none;
 }
+
 /* ------------------------------------------------TODA ESTA LINEA DE CODIGO VA EN TODOS LOS ESTILOS------------------------------------------------ */
 
+
+/* --- Contenedor principal --- */
 .containers {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
               0 10px 10px rgba(0,0,0,0.22);
   position: relative;
   overflow: hidden;
-  width: 768px;
+  width: 800px;
   max-width: 100%;
   min-height: 480px;
-  margin: 50px auto; /* Centrado en la pantalla */
 }
 
+/* --- Formularios --- */
 .form-containers {
   position: absolute;
   top: 0;
@@ -246,25 +213,25 @@ input {
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
-}
-
-button {
-  border: none;
-  padding: 12px 45px;
-  background-color: #4A90E2;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 20px;
-  cursor: pointer;
   border-radius: 5px;
 }
 
-button:hover {
-  background-color: #0056b3;
+/* --- Botones --- */
+.btn-azul {
+  background-color: #4A90E2 !important;
+  color: #fff !important;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 12px 45px;
+  transition: 0.3s ease;
 }
 
+.btn-azul:hover {
+  background-color: #0056b3 !important;
+}
+
+/* --- Overlay (panel deslizante escritorio) --- */
 .overlay-containers {
   position: absolute;
   top: 0;
@@ -281,9 +248,10 @@ button:hover {
 }
 
 .overlay {
-  background: #4A90E2;
   background: linear-gradient(to right, #4A90E2, #6fb1fc);
-  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
   position: relative;
   left: -100%;
   height: 100%;
@@ -307,7 +275,6 @@ button:hover {
   top: 0;
   height: 100%;
   width: 50%;
-  transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
 
@@ -316,12 +283,12 @@ button:hover {
 }
 
 .containers.right-panel-active .overlay-left {
-  transform: translateX(-10%);
+  transform: translateX(0);
 }
 
 .overlay-right {
   right: 0;
-  transform: translateX(10%);
+  transform: translateX(0);
 }
 
 .containers.right-panel-active .overlay-right {
@@ -337,77 +304,102 @@ button:hover {
   margin-top: 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s ease;
 }
 
 .ghost:hover {
   background-color: rgba(255,255,255,0.1);
 }
 
-/*pie*/
-.footer {
-  background-color: #4A9FE3;
+/* --- Tabs en modo móvil --- */
+.mobile-tabs {
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tab-btn {
+  background-color: #4A90E2;
   color: white;
-  padding: 30px 0;
-  font-family: Arial, sans-serif;
-  margin-top: 30px;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.footer .container {
-  max-width: 1100px;
-  margin: auto;
+.tab-btn.active {
+  background-color: #0056b3;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.tab-btn:not(.active) {
+  background-color: #6fb1fc;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-  margin: 10px;
+.tab-btn:hover {
+  background-color: #0056b3;
 }
 
-.footer-section h4 {
-  font-size: 23px;
-  margin-bottom: 10px;
-}
-
-.footer-section ul {
+/* --- Reglas de contraseña --- */
+.password-rules {
   list-style: none;
+  font-size: 14px;
+  margin: 8px 0 0;
   padding: 0;
+  color: #555;
+  width: 100%;
+  text-align: left;
 }
 
-.footer-section ul li {
-  margin: 5px 0;
-}
-
-.footer-section ul li a {
-  color: white;
-  text-decoration: none;
+.password-rules li {
+  margin-bottom: 4px;
   transition: color 0.3s;
 }
 
-.footer-section ul li a:hover {
-  color: #dceeff;
+.password-rules li.ok {
+  color: transparent;
 }
 
-.footer-logo img {
-  width: 200px;
-  margin-bottom: 10px;
+.password-rules li.fail {
+  color: red;
 }
 
-.footer p {
-  font-size: 14px;
-  margin: 5px 0;
+.password-rules li::before {
+  content: "• ";
 }
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.4);
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 14px;
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .containers {
+    width: 95%;
+    min-height: 500px;
+    padding: 20px;
+  }
+
+  .overlay-containers {
+    display: none;
+  }
+
+  .mobile-tabs {
+    display: flex;
+  }
+
+  .sign-in-containers,
+  .sign-up-containers {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .sign-up-containers {
+    display: none;
+  }
+
+  .password-rules {
+    font-size: 13px;
+  }
 }

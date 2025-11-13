@@ -3,126 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UZO - Orientación Vocacional</title>
-  <link rel="stylesheet" href="../CSS/login_register-style.css">
+  <title>Iniciar Sesión | UZO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/login_register-style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR (idéntico al index) -->
 <header>
-  <a href="../index.html" class="logo">
-    <img src="../imagenes/logo.png" alt="logo">
-  </a>
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="../HTML/universidades.html">Universidades</a>
-    <a href="../HTML/testintereses.html">Test de Intereses</a>
-    <a href="../HTML/contacto.html">Contacto</a>
-  </nav>
-  <div class="nave">
-    <!-- Ícono lupa -->
-    <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+    <nav class="navbar navbar-expand-lg py-0">
+        <div class="container-fluid px-lg-5">
+            <a href="../index.html" class="navbar-brand py-0">
+                <img src="../imagenes/logo.png" alt="logo" style="height: 200px;">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-3 fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="universidades.html">Universidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testintereses.html">Test de Intereses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <div class="nave d-flex align-items-center gap-3 position-relative">
+                        <img src="../imagenes/search.png" alt="Buscar" id="icono-busqueda" class="icono-busqueda" style="cursor: pointer; height: 20px;">
+                        
+                        <div id="buscador-container" class="buscador-wrapper oculto">
+                        <div class="input-wrapper">
+                            <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
+                            <div id="sombra" class="input-shadow"></div>
+                        </div>
+                        <div id="sugerencias" class="autocomplete-box"></div>
+                        </div>
 
-    <!-- Contenedor de búsqueda oculto -->
-    <div id="buscador-container" class="buscador-wrapper oculto">
-      <div class="input-wrapper">
-        <input type="text" id="buscador" placeholder="Buscar universidad..." autocomplete="off">
-        <div id="sombra" class="input-shadow"></div>
-      </div>
-      <div id="sugerencias" class="autocomplete-box"></div>
-    </div>
-
-    <!-- Otros íconos -->
-    <a href="#"><img src="../imagenes/user.png" alt="Usuario"></a>
-  </div>
+                        <a href="#"><img src="../imagenes/user.png" alt="Usuario" style="height: 20px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>
-<main>
+
+  <!-- CONTENIDO PRINCIPAL -->
+<main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
   <div class="containers" id="containers">
+
+    <!-- Navegación móvil -->
+    <div class="mobile-tabs d-lg-none text-center mb-3">
+      <button class="tab-btn active" id="tabLogin">Iniciar Sesión</button>
+      <button class="tab-btn" id="tabRegister">Crear Cuenta</button>
+    </div>
+
+    <!-- REGISTRO -->
     <div class="form-containers sign-up-containers">
-      <form action="#">
-        <h1>Crear Cuenta</h1>
-        <input type="text" placeholder="Nombre" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Contraseña" />
-        <button>Registrarse</button>
+      <form action="../PHP/register.php" method="POST" class="bg-white">
+        <h2 class="fw-bold text-primary mb-3 d-none d-lg-block">Crear Cuenta</h2>
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" id="password" placeholder="Contraseña" required oninput="validarPassword()" />
+        <ul id="reglas" class="password-rules text-start">
+          <li id="longitud" class="fail">Mínimo 8 caracteres</li>
+          <li id="mayus" class="fail">Al menos una letra mayúscula</li>
+          <li id="minus" class="fail">Al menos una letra minúscula</li>
+          <li id="numero" class="fail">Al menos un número</li>
+          <li id="simbolo" class="fail">Al menos un símbolo (!, @, #, $, %...)</li>
+        </ul>
+        <button type="submit" class="btn btn-azul w-100 mt-2">Registrarse</button>
       </form>
     </div>
+
+    <!-- LOGIN -->
     <div class="form-containers sign-in-containers">
-      <form action="#">
-        <h1>Iniciar Sesion</h1>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Contraseña" />
-        <button>Iniciar Sesion</button>
+      <form action="../PHP/login.php" method="POST" class="bg-white">
+        <h2 class="fw-bold text-primary mb-3 d-none d-lg-block">Iniciar Sesión</h2>
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Contraseña" required />
+        <button type="submit" class="btn btn-azul w-100">Iniciar Sesión</button>
       </form>
     </div>
-    <div class="overlay-containers">
+
+    <!-- PANEL DESLIZANTE (solo escritorio) -->
+    <div class="overlay-containers d-none d-lg-block">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
-          <h1>Bienvenido!</h1>
-          <p>Para conectarte, porfavor inicie sesion!</p>
-          <button class="ghost" id="signIn">Iniciar sesion</button>
+          <h2 class="fw-bold">¡Bienvenido de nuevo!</h2>
+          <p>Para mantenerte conectado, iniciá sesión con tus datos personales.</p>
+          <button class="ghost" id="signIn">Iniciar Sesión</button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1>Hola amigo!</h1>
-          <p>ingresa tus datos para poder registrate!</p>
+          <h2 class="fw-bold">¡Hola, futuro estudiante!</h2>
+          <p>Ingresá tus datos y descubrí tu camino vocacional.</p>
           <button class="ghost" id="signUp">Registrarse</button>
         </div>
       </div>
     </div>
   </div>
-</main> 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
+</main>
 
-        <!-- Logo -->
-        <div class="footer-section">
+<script>
+  // Panel deslizable (solo escritorio)
+  const signUpButton = document.getElementById('signUp');
+  const signInButton = document.getElementById('signIn');
+  const containers = document.getElementById('containers');
+  if (signUpButton && signInButton) {
+    signUpButton.addEventListener('click', () => containers.classList.add('right-panel-active'));
+    signInButton.addEventListener('click', () => containers.classList.remove('right-panel-active'));
+  }
+
+  // Tabs en mobile
+  const tabLogin = document.getElementById('tabLogin');
+  const tabRegister = document.getElementById('tabRegister');
+  const signInContainer = document.querySelector('.sign-in-containers');
+  const signUpContainer = document.querySelector('.sign-up-containers');
+
+  tabLogin.addEventListener('click', () => {
+    tabLogin.classList.add('active');
+    tabRegister.classList.remove('active');
+    signInContainer.style.display = 'block';
+    signUpContainer.style.display = 'none';
+  });
+
+  tabRegister.addEventListener('click', () => {
+    tabRegister.classList.add('active');
+    tabLogin.classList.remove('active');
+    signUpContainer.style.display = 'block';
+    signInContainer.style.display = 'none';
+  });
+
+  // Validación visual de contraseña
+  function validarPassword() {
+    const pass = document.getElementById("password").value;
+    const reglas = {
+      longitud: pass.length >= 8,
+      mayus: /[A-Z]/.test(pass),
+      minus: /[a-z]/.test(pass),
+      numero: /\d/.test(pass),
+      simbolo: /[\W_]/.test(pass)
+    };
+    for (const regla in reglas) {
+      const item = document.getElementById(regla);
+      item.className = reglas[regla] ? "ok" : "fail";
+    }
+  }
+</script>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer bg-primary text-white mt-auto">
+    <div class="container py-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 footer-content">
+        <div class="col footer-section">
           <div class="footer-logo">
-            <a href="../index.html">
-              <img src="../imagenes/logo.png" alt="UZO Logo">
-            </a>
+            <a href="../index.html"><img src="../imagenes/logo.png" alt="UZO Logo" class="img-fluid"></a>
           </div>
-          
         </div>
 
-        <!-- Sección UZO -->
-        <div class="footer-section">
-          <h4>UZO</h4>
-          <ul>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="#">Términos de Servicio</a></li>
-            <li><a href="#">Política de Privacidad</a></li>
+        <div class="col footer-section">
+          <h4 class="fs-5 mb-3 fw-bold">UZO</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Sobre Nosotros</a></li>
+            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Términos de Servicio</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Política de Privacidad</a></li>
           </ul>
         </div>
 
-        <!-- Recursos -->
-        <div class="footer-section">
-          <h4>Recursos</h4>
-          <ul>
-            <li><a href="testintereses.html">Test de Intereses</a></li>
-            <li><a href="universidades.html">Listado de Universidades</a></li>
-            <li><a href="#">Guías y Consejos</a></li>
-            <li><a href="#">Preguntas Frecuentes</a></li>
+        <div class="col footer-section">
+          <h4 class="fs-5 mb-3 fw-bold">Recursos</h4>
+          <ul class="list-unstyled">
+            <li><a href="testintereses.html" class="text-white text-decoration-none">Test de Intereses</a></li>
+            <li><a href="universidades.html" class="text-white text-decoration-none">Listado de Universidades</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Guías y Consejos</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
           </ul>
         </div>
 
-        <!-- Contacto -->
-        <div class="footer-section">
-          <h4>Contacto</h4>
-          <p>📧 uzo.official@gmail.com</p>
-          <p>📍 Zona Oeste, Buenos Aires.</p>
+        <div class="col footer-section">
+          <h4 class="fs-5 mb-3 fw-bold">Contacto</h4>
+          <ul class="list-unstyled">
+            <li class="mb-1">uzo.contacto@gmail.com</li>
+            <li>Zona Oeste, Buenos Aires.</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Derechos reservados -->
-      <div class="footer-bottom">
-        <p>© 2025 UZO - Todos los derechos reservados.</p>
-        <p>Tu buscador de universidades y carreras de Zona Oeste.</p>
+      <div class="footer-bottom text-center pt-3 mt-4 border-top border-light border-opacity-50">
+        <p class="mb-1">© 2025 UZO - Todos los derechos reservados.</p>
+        <p class="mb-0">Tu buscador de universidades y carreras de Zona Oeste.</p>
       </div>
     </div>
   </footer>
-<script src="../JS/login_register.JS"></script>
-<script src="../JS/toggle-buscador.js"></script>
-<script src="../JS/buscador.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/login_register.JS"></script>
+  <script src="../JS/buscador.js"></script>
+  <script src="../JS/toggle-buscador.js"></script>
 </body>
 </html>
