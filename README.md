@@ -1,1 +1,1 @@
-aa
+UnIdeal es una plataforma web interactiva que busca ayudar a los estudiantes a tomar decisiones informadas sobre su futuro académico, conectándolos con universidades locales y brindando asesoramiento personalizado a través de herramientas digitales.
